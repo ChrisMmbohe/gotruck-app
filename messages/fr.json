@@ -10,32 +10,208 @@
     "settings": "Paramètres",
     "signIn": "Se Connecter",
     "signOut": "Se Déconnecter",
-    "getStarted": "Commencer"
+    "getStarted": "Commencer",
+    "solutions": "Solutions",
+    "pricing": "Tarification",
+    "resources": "Ressources",
+    "company": "Entreprise"
   },
   "home": {
     "hero": {
-      "title": "Logistique de Fret EAC Simplifié",
-      "subtitle": "Suivi en temps réel, analyses prédictives et gestion transparente du fret transfrontalier pour le Kenya, l'Ouganda, la Tanzanie et au-delà."
+      "badge": "Au service de 6 pays de la CAE",
+      "title": "Renforcez Votre Flotte CAE:",
+      "titleHighlight": "Sécurité, Efficacité, Croissance",
+      "subtitle": "Gestion de flotte basée sur l'IA et logistique de fret pour l'Afrique de l'Est. Suivi en temps réel, analyses prédictives et opérations transfrontalières transparentes.",
+      "benefit1": "Réduction des coûts de 30%",
+      "benefit2": "Conformité Transfrontalière",
+      "benefit3": "Suivi GPS en Temps Réel",
+      "ctaPrimary": "Commencer l'Essai Gratuit",
+      "ctaSecondary": "Voir la Démo",
+      "trustIndicator": "Approuvé par plus de 500 entreprises de logistique au Kenya, en Ouganda, en Tanzanie, au Rwanda, au Burundi et au Soudan du Sud"
     },
     "features": {
-      "title": "Fonctionnalités Puissantes pour la Logistique EAC",
-      "tracking": {
-        "title": "Suivi GPS en Temps Réel",
-        "description": "Suivez votre flotte à travers les frontières de l'EAC avec des mises à jour de localisation en direct et une optimisation des itinéraires."
+      "title": "Plateforme Logistique CAE Complète",
+      "subtitle": "Tout ce dont vous avez besoin pour gérer les opérations de fret en Afrique de l'Est, de la sécurité IA à la conformité transfrontalière.",
+      "aiSafety": {
+        "title": "Sécurité Basée sur l'IA",
+        "description": "Technologie avancée de dashcam avec surveillance en temps réel du comportement du conducteur, prévention des collisions et alertes de sécurité automatisées."
+      },
+      "realTimeTracking": {
+        "title": "Suivi GPS en Direct",
+        "description": "Suivez toute votre flotte à travers les frontières de la CAE avec des mises à jour de localisation en temps réel, géorepérage et optimisation des itinéraires."
       },
       "analytics": {
         "title": "Analyses Prédictives",
-        "description": "Informations alimentées par l'IA pour l'efficacité énergétique, la planification d'itinéraires et la programmation de la maintenance."
+        "description": "Informations d'apprentissage automatique pour l'efficacité énergétique, la planification de la maintenance et la planification intelligente des itinéraires pour réduire les coûts."
       },
-      "currency": {
-        "title": "Support Multi-Devises",
-        "description": "Gérez les transactions en KES, UGX, TZS avec les paiements Stripe intégrés."
+      "compliance": {
+        "title": "Douanes et Conformité",
+        "description": "Documentation automatisée pour le fret transfrontalier de la CAE avec dédouanement numérique et mises à jour en temps réel des passages frontaliers."
+      },
+      "multiCurrency": {
+        "title": "Paiements Multi-Devises",
+        "description": "Gérez les transactions de manière transparente en KES, UGX et TZS avec traitement et facturation des paiements Stripe intégrés."
+      },
+      "security": {
+        "title": "Sécurité du Fret",
+        "description": "Surveillance avancée du fret avec alertes de vol, détection de manipulation et suivi sécurisé pour les expéditions de grande valeur."
+      },
+      "iot": {
+        "title": "Capteurs IoT",
+        "description": "Capteurs de température, d'humidité et de choc pour les marchandises sensibles avec surveillance en temps réel des conditions et alertes."
+      },
+      "automation": {
+        "title": "Automatisation des Flux de Travail",
+        "description": "Automatisez les flux de travail de répartition, de documentation et de reporting pour réduire le travail manuel et améliorer l'efficacité opérationnelle."
+      },
+      "eacNetwork": {
+        "title": "Couverture Réseau CAE",
+        "description": "Couverture complète sur tous les corridors principaux: Djibouti, Nord, Centre et Sud avec expertise régionale."
+      },
+      "efficiency": {
+        "title": "Efficacité Temporelle",
+        "description": "Réduisez les délais de livraison jusqu'à 25% avec un routage optimisé, une analyse du trafic et des prévisions de passages frontaliers."
+      },
+      "inventory": {
+        "title": "Gestion des Stocks",
+        "description": "Suivez le fret de l'entrepôt à la destination avec lecture de codes-barres, preuve de livraison numérique et inventaire en temps réel."
+      },
+      "fleetManagement": {
+        "title": "Contrôle Complet de la Flotte",
+        "description": "Gestion complète des véhicules avec suivi de la maintenance, surveillance du carburant et analyses de performance des conducteurs."
+      },
+      "integrations": "S'intègre parfaitement avec"
+    },
+    "stats": {
+      "countries": {
+        "value": "6",
+        "label": "Pays de la CAE Desservis"
+      },
+      "users": {
+        "value": "500+",
+        "label": "Opérateurs de Flotte Actifs"
+      },
+      "shipments": {
+        "value": "50K+",
+        "label": "Expéditions Mensuelles Suivies"
+      },
+      "savings": {
+        "value": "30%",
+        "label": "Réduction Moyenne des Coûts"
       }
+    },
+    "testimonials": {
+      "title": "Approuvé par les Leaders Logistiques de la CAE",
+      "subtitle": "Découvrez comment les entreprises d'Afrique de l'Est transforment leurs opérations avec GoTruck",
+      "testimonial1": {
+        "quote": "GoTruck a révolutionné nos opérations transfrontalières. Le suivi en temps réel et la documentation douanière automatisée ont réduit nos temps de passage aux frontières de 40%.",
+        "author": "James Kimani",
+        "role": "Directeur des Opérations",
+        "company": "EastLink Logistics",
+        "country": "Kenya",
+        "impact": "Passages frontaliers 40% plus rapides"
+      },
+      "testimonial2": {
+        "quote": "L'optimisation des itinéraires basée sur l'IA nous a fait économiser des milliers en coûts de carburant. Nous pouvons maintenant gérer 30% de livraisons en plus avec la même taille de flotte.",
+        "author": "Sarah Nakato",
+        "role": "Gestionnaire de Flotte",
+        "company": "TransUganda Freight",
+        "country": "Ouganda",
+        "impact": "Augmentation de 30% de la capacité de livraison"
+      },
+      "testimonial3": {
+        "quote": "Plateforme exceptionnelle! Le support multi-devises et les fonctionnalités de facturation ont rationalisé notre facturation dans trois pays. Le service client est exceptionnel.",
+        "author": "Hassan Mwinyipembe",
+        "role": "PDG",
+        "company": "Dar Cargo Express",
+        "country": "Tanzanie",
+        "impact": "Réduction de 50% des erreurs de facturation"
+      }
+    },
+    "resources": {
+      "title": "Perspectives Logistiques CAE",
+      "subtitle": "Restez informé des dernières tendances, réglementations et meilleures pratiques dans la gestion du fret en Afrique de l'Est",
+      "article1": {
+        "type": "Rapport de Marché",
+        "title": "Tendances du Fret CAE 2026: Transformation Numérique de la Logistique Régionale",
+        "excerpt": "Découvrez comment la technologie remodèle les opérations de fret transfrontalier au Kenya, en Ouganda et en Tanzanie avec des perspectives sur l'adoption de l'IA et la croissance du marché.",
+        "date": "10 jan. 2026",
+        "readTime": "8 min de lecture",
+        "category": "Analyse de Marché"
+      },
+      "article2": {
+        "type": "Guide",
+        "title": "Naviguer dans les Douanes CAE: Un Guide Complet de la Conformité Transfrontalière",
+        "excerpt": "Guide étape par étape sur la documentation, les procédures et les meilleures pratiques pour un dédouanement transparent aux passages frontaliers de la CAE.",
+        "date": "8 jan. 2026",
+        "readTime": "12 min de lecture",
+        "category": "Conformité"
+      },
+      "article3": {
+        "type": "Étude de Cas",
+        "title": "Comment l'IA a Réduit les Coûts de Carburant de 35% pour un Opérateur de Flotte Kenyan",
+        "excerpt": "Histoire de réussite réelle: Apprenez comment les analyses prédictives et l'optimisation des itinéraires ont généré d'importantes économies de coûts pour une grande entreprise de logistique basée à Nairobi.",
+        "date": "5 jan. 2026",
+        "readTime": "6 min de lecture",
+        "category": "Technologie"
+      },
+      "readMore": "Lire Plus",
+      "viewAll": "Voir Toutes les Ressources"
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Logistique CAE?",
+      "subtitle": "Rejoignez des centaines d'opérateurs de flotte qui économisent du temps et de l'argent avec GoTruck. Commencez votre essai gratuit de 30 jours aujourd'hui—aucune carte de crédit requise.",
+      "benefit1": "Essai gratuit de 30 jours",
+      "benefit2": "Aucune carte de crédit requise",
+      "benefit3": "Accès complet à la plateforme",
+      "benefit4": "Support 24/7 en anglais, swahili et français",
+      "ctaPrimary": "Commencer l'Essai Gratuit",
+      "ctaSecondary": "Planifier une Démo",
+      "trustMessage": "🔒 Sécurité de niveau entreprise • Conforme SOC 2 • Prêt RGPD"
     }
+  },
+  "footer": {
+    "tagline": "Autonomiser la logistique est-africaine avec des solutions de gestion de flotte et de fret basées sur l'IA.",
+    "sections": {
+      "solutions": "Solutions",
+      "company": "Entreprise",
+      "resources": "Ressources",
+      "legal": "Juridique"
+    },
+    "solutions": {
+      "tracking": "Suivi en Temps Réel",
+      "fleet": "Gestion de Flotte",
+      "analytics": "Analyses Prédictives",
+      "compliance": "Douanes et Conformité"
+    },
+    "company": {
+      "about": "À Propos",
+      "careers": "Carrières",
+      "press": "Presse",
+      "partners": "Partenaires"
+    },
+    "resources": {
+      "blog": "Blog",
+      "guides": "Guides",
+      "api": "Documentation API",
+      "support": "Centre d'Assistance"
+    },
+    "legal": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "security": "Sécurité"
+    },
+    "regionalOffices": "Bureaux Régionaux",
+    "offices": {
+      "nairobi": "Nairobi",
+      "kampala": "Kampala",
+      "daressalaam": "Dar es Salaam"
+    },
+    "copyright": "Tous droits réservés."
   },
   "dashboard": {
     "overview": "Aperçu du Tableau de Bord",
-    "subtitle": "Surveillez vos opérations de fret à travers l'EAC",
+    "subtitle": "Surveillez vos opérations de fret à travers la CAE",
     "activeShipments": "Expéditions Actives",
     "fleetVehicles": "Véhicules de Flotte",
     "borderCrossings": "Passages Frontaliers",

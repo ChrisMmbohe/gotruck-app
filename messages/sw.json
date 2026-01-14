@@ -10,28 +10,204 @@
     "settings": "Mipangilio",
     "signIn": "Ingia",
     "signOut": "Toka",
-    "getStarted": "Anza Sasa"
+    "getStarted": "Anza Sasa",
+    "solutions": "Suluhisho",
+    "pricing": "Bei",
+    "resources": "Rasilimali",
+    "company": "Kampuni"
   },
   "home": {
     "hero": {
-      "title": "Usafirishaji wa Mizigo ya EAC Umefanywa Rahisi",
-      "subtitle": "Ufuatiliaji wa wakati halisi, uchanganuzi wa kitabiri, na usimamizi wa mizigo usio na vikwazo kwa Kenya, Uganda, Tanzania, na zaidi."
+      "badge": "Kuhudhumu Nchi 6 za EAC",
+      "title": "Imarisha Magari Yako ya EAC:",
+      "titleHighlight": "Usalama, Ufanisi, Ukuaji",
+      "subtitle": "Usimamizi wa magari unaotumia AI na usafirishaji wa mizigo kwa Afrika Mashariki. Ufuatiliaji wa wakati halisi, uchanganuzi wa kitabiri, na shughuli zinazovuka mipaka bila matatizo.",
+      "benefit1": "Kupunguza Gharama kwa 30%",
+      "benefit2": "Kuzingatia Sheria za Mipaka",
+      "benefit3": "Ufuatiliaji wa GPS wa Wakati Halisi",
+      "ctaPrimary": "Anza Majaribio ya Bure",
+      "ctaSecondary": "Angalia Onyesho",
+      "trustIndicator": "Tunaaminika na zaidi ya kampuni 500+ za usafirishaji kote Kenya, Uganda, Tanzania, Rwanda, Burundi, na Sudan Kusini"
     },
     "features": {
-      "title": "Vipengele Vyenye Nguvu vya Usafirishaji wa EAC",
-      "tracking": {
-        "title": "Ufuatiliaji wa GPS wa Wakati Halisi",
-        "description": "Fuatilia magari yako kote EAC kwa visasisho vya mahali na uboresha njia."
+      "title": "Jukwaa Kamili la Usafirishaji wa EAC",
+      "subtitle": "Kila kitu unachohitaji kusimamia shughuli za mizigo kote Afrika Mashariki, kutoka usalama wa AI hadi kuzingatia sheria za mipaka.",
+      "aiSafety": {
+        "title": "Usalama Unaotumia AI",
+        "description": "Teknolojia ya juu ya kamera ya gari yenye ufuatiliaji wa tabia ya dereva wa wakati halisi, kuzuia mgongano, na arifa za usalama zilizojikita."
+      },
+      "realTimeTracking": {
+        "title": "Ufuatiliaji wa GPS wa Moja kwa Moja",
+        "description": "Fuatilia magari yako yote kuvuka mipaka ya EAC kwa visasisho vya mahali vya wakati halisi, geofencing, na uboresha njia."
       },
       "analytics": {
         "title": "Uchanganuzi wa Kitabiri",
-        "description": "Maarifa ya AI kwa ufanisi wa mafuta, mipango ya njia, na ratiba ya matengenezo."
+        "description": "Maarifa ya kujifunza kwa mashine kwa ufanisi wa mafuta, ratiba ya matengenezo, na mipango ya njia yenye akili kupunguza gharama."
       },
-      "currency": {
-        "title": "Msaada wa Sarafu Nyingi",
-        "description": "Shughulikia miamala katika KES, UGX, TZS na malipo ya Stripe."
+      "compliance": {
+        "title": "Forodha na Kuzingatia Sheria",
+        "description": "Nyaraka zilizojikita kwa mizigo ya EAC inayovuka mipaka na ufafanuzi wa forodha wa kidijitali na visasisho vya wakati halisi vya kuvuka mipaka."
+      },
+      "multiCurrency": {
+        "title": "Malipo ya Sarafu Nyingi",
+        "description": "Shughulikia miamala bila matatizo katika KES, UGX, na TZS kwa usindikaji wa malipo ya Stripe ulioingizwa na kutolea ankara."
+      },
+      "security": {
+        "title": "Usalama wa Mizigo",
+        "description": "Ufuatiliaji wa juu wa mizigo wenye arifa za wizi, kugundua udhalili, na ufuatiliaji salama kwa mzigo wa thamani kubwa."
+      },
+      "iot": {
+        "title": "Vihisi vya IoT",
+        "description": "Vihisi vya joto, unyevu, na mshtuko kwa mizigo nyeti yenye ufuatiliaji wa hali ya wakati halisi na arifa."
+      },
+      "automation": {
+        "title": "Automation ya Mchakato",
+        "description": "Ongeza kiotomatiki usambazaji, nyaraka, na mchakato wa kuripoti kupunguza kazi ya mkono na kuboresha ufanisi wa utendaji."
+      },
+      "eacNetwork": {
+        "title": "Kifuniko cha Mtandao wa EAC",
+        "description": "Kifuniko kamili kote njia kuu zote: Djibouti, Kaskazini, Kati, na Kusini na utaalamu wa kikanda."
+      },
+      "efficiency": {
+        "title": "Ufanisi wa Muda",
+        "description": "Punguza muda wa utoaji hadi 25% kwa njia zilizoboreswa, uchanganuzi wa trafiki, na utabiri wa kuvuka mipaka."
+      },
+      "inventory": {
+        "title": "Usimamizi wa Hesabu",
+        "description": "Fuatilia mizigo kutoka ghala hadi malengo na barcode scanning, thibitisho la kidijitali la utoaji, na hesabu ya wakati halisi."
+      },
+      "fleetManagement": {
+        "title": "Udhibiti Kamili wa Magari",
+        "description": "Usimamizi wa kina wa magari wenye ufuatiliaji wa matengenezo, ufuatiliaji wa mafuta, na uchanganuzi wa utendaji wa madereva."
+      },
+      "integrations": "Inaunganisha bila matatizo na"
+    },
+    "stats": {
+      "countries": {
+        "value": "6",
+        "label": "Nchi za EAC Zinazohudhumiwa"
+      },
+      "users": {
+        "value": "500+",
+        "label": "Waendeshaji wa Magari Wanaofanya Kazi"
+      },
+      "shipments": {
+        "value": "50K+",
+        "label": "Mizigo Inayofuatiliwa kwa Mwezi"
+      },
+      "savings": {
+        "value": "30%",
+        "label": "Wastani wa Kupunguza Gharama"
       }
+    },
+    "testimonials": {
+      "title": "Tunaaminika na Viongozi wa Usafirishaji wa EAC",
+      "subtitle": "Angalia jinsi kampuni kote Afrika Mashariki zinavyobadilisha shughuli zao na GoTruck",
+      "testimonial1": {
+        "quote": "GoTruck imebadilisha shughuli zetu za kuvuka mipaka. Ufuatiliaji wa wakati halisi na nyaraka za forodha zilizojikita zimepunguza muda wetu wa kuvuka mipaka kwa 40%.",
+        "author": "James Kimani",
+        "role": "Mkurugenzi wa Shughuli",
+        "company": "EastLink Logistics",
+        "country": "Kenya",
+        "impact": "Kuvuka mipaka kwa haraka zaidi kwa 40%"
+      },
+      "testimonial2": {
+        "quote": "Uboresha njia unaotumia AI umetuokoa maelfu katika gharama za mafuta. Tunaweza sasa kushughulikia utoaji zaidi kwa 30% na ukubwa sawa wa magari.",
+        "author": "Sarah Nakato",
+        "role": "Meneja wa Magari",
+        "company": "TransUganda Freight",
+        "country": "Uganda",
+        "impact": "Ongezeko la 30% katika uwezo wa utoaji"
+      },
+      "testimonial3": {
+        "quote": "Jukwaa la ajabu! Msaada wa sarafu nyingi na vipengele vya kutolea ankara vimesawazisha bili zetu katika nchi tatu. Huduma kwa wateja ni bora sana.",
+        "author": "Hassan Mwinyipembe",
+        "role": "Mkurugenzi Mtendaji",
+        "company": "Dar Cargo Express",
+        "country": "Tanzania",
+        "impact": "Kupunguza makosa ya bili kwa 50%"
+      }
+    },
+    "resources": {
+      "title": "Maarifa ya Usafirishaji wa EAC",
+      "subtitle": "Baki ukijulishwa na mitindo ya hivi punde, kanuni, na mbinu bora katika usimamizi wa mizigo wa Afrika Mashariki",
+      "article1": {
+        "type": "Ripoti ya Soko",
+        "title": "Mitindo ya Mizigo ya EAC ya 2026: Mabadiliko ya Kidijitali katika Usafirishaji wa Kikanda",
+        "excerpt": "Gundua jinsi teknolojia inavyounda upya shughuli za mizigo zinazovuka mipaka kote Kenya, Uganda, na Tanzania kwa maarifa katika ukubaliaji wa AI na ukuaji wa soko.",
+        "date": "Jan 10, 2026",
+        "readTime": "Dakika 8 za kusoma",
+        "category": "Uchanganuzi wa Soko"
+      },
+      "article2": {
+        "type": "Mwongozo",
+        "title": "Kusafiri Forodha za EAC: Mwongozo Kamili wa Kuzingatia Sheria za Kuvuka Mipaka",
+        "excerpt": "Mwongozo wa hatua kwa hatua kuhusu nyaraka, taratibu, na mbinu bora kwa ufafanuzi wa forodha bila matatizo kwenye mipaka ya EAC.",
+        "date": "Jan 8, 2026",
+        "readTime": "Dakika 12 za kusoma",
+        "category": "Kuzingatia Sheria"
+      },
+      "article3": {
+        "type": "Uchunguzi wa Kesi",
+        "title": "Jinsi AI Ilipunguza Gharama za Mafuta kwa 35% kwa Mwendeshaji wa Magari wa Kenya",
+        "excerpt": "Hadithi ya mafanikio ya ulimwengu halisi: Jifunze jinsi uchanganuzi wa kitabiri na uboresha njia ulivyotoa uokoaji mkubwa wa gharama kwa kampuni kubwa ya usafirishaji iliyoko Nairobi.",
+        "date": "Jan 5, 2026",
+        "readTime": "Dakika 6 za kusoma",
+        "category": "Teknolojia"
+      },
+      "readMore": "Soma Zaidi",
+      "viewAll": "Angalia Rasilimali Zote"
+    },
+    "cta": {
+      "title": "Tayari Kubadilisha Usafirishaji Wako wa EAC?",
+      "subtitle": "Jiunge na mamia ya waendeshaji wa magari ambao wanaokoa muda na pesa na GoTruck. Anza majaribio yako ya bure ya siku 30 leo—hakuna kadi ya mkopo inayohitajika.",
+      "benefit1": "Majaribio ya bure ya siku 30",
+      "benefit2": "Hakuna kadi ya mkopo inayohitajika",
+      "benefit3": "Ufikiaji kamili wa jukwaa",
+      "benefit4": "Msaada wa saa 24/7 kwa Kiingereza, Kiswahili na Kifaransa",
+      "ctaPrimary": "Anza Majaribio ya Bure",
+      "ctaSecondary": "Ratiba Onyesho",
+      "trustMessage": "🔒 Usalama wa kiwango cha biashara • Inazingatia SOC 2 • Tayari kwa GDPR"
     }
+  },
+  "footer": {
+    "tagline": "Kuimarisha usafirishaji wa Afrika Mashariki na usimamizi wa magari unaotumia AI na suluhisho la mizigo.",
+    "sections": {
+      "solutions": "Suluhisho",
+      "company": "Kampuni",
+      "resources": "Rasilimali",
+      "legal": "Kisheria"
+    },
+    "solutions": {
+      "tracking": "Ufuatiliaji wa Wakati Halisi",
+      "fleet": "Usimamizi wa Magari",
+      "analytics": "Uchanganuzi wa Kitabiri",
+      "compliance": "Forodha na Kuzingatia Sheria"
+    },
+    "company": {
+      "about": "Kuhusu Sisi",
+      "careers": "Kazi",
+      "press": "Habari",
+      "partners": "Washirika"
+    },
+    "resources": {
+      "blog": "Blogu",
+      "guides": "Miongozo",
+      "api": "Nyaraka za API",
+      "support": "Kituo cha Msaada"
+    },
+    "legal": {
+      "privacy": "Sera ya Faragha",
+      "terms": "Masharti ya Huduma",
+      "security": "Usalama"
+    },
+    "regionalOffices": "Ofisi za Kikanda",
+    "offices": {
+      "nairobi": "Nairobi",
+      "kampala": "Kampala",
+      "daressalaam": "Dar es Salaam"
+    },
+    "copyright": "Haki zote zimehifadhiwa."
   },
   "dashboard": {
     "overview": "Muhtasari wa Dashibodi",

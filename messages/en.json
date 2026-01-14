@@ -10,28 +10,204 @@
     "settings": "Settings",
     "signIn": "Sign In",
     "signOut": "Sign Out",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "company": "Company"
   },
   "home": {
     "hero": {
-      "title": "EAC Freight Logistics Made Simple",
-      "subtitle": "Real-time tracking, predictive analytics, and seamless cross-border freight management for Kenya, Uganda, Tanzania, and beyond."
+      "badge": "Serving 6 EAC Countries",
+      "title": "Empower Your EAC Fleet:",
+      "titleHighlight": "Safety, Efficiency, Growth",
+      "subtitle": "AI-powered fleet management and freight logistics for East Africa. Real-time tracking, predictive analytics, and seamless cross-border operations.",
+      "benefit1": "30% Cost Reduction",
+      "benefit2": "Cross-Border Compliance",
+      "benefit3": "Real-Time GPS Tracking",
+      "ctaPrimary": "Start Free Trial",
+      "ctaSecondary": "Watch Demo",
+      "trustIndicator": "Trusted by over 500+ logistics companies across Kenya, Uganda, Tanzania, Rwanda, Burundi, and South Sudan"
     },
     "features": {
-      "title": "Powerful Features for EAC Logistics",
-      "tracking": {
-        "title": "Real-Time GPS Tracking",
-        "description": "Track your fleet across EAC borders with live location updates and route optimization."
+      "title": "Complete EAC Logistics Platform",
+      "subtitle": "Everything you need to manage freight operations across East Africa, from AI safety to cross-border compliance.",
+      "aiSafety": {
+        "title": "AI-Powered Safety",
+        "description": "Advanced dashcam technology with real-time driver behavior monitoring, collision prevention, and automated safety alerts."
+      },
+      "realTimeTracking": {
+        "title": "Live GPS Tracking",
+        "description": "Track your entire fleet across EAC borders with real-time location updates, geofencing, and route optimization."
       },
       "analytics": {
         "title": "Predictive Analytics",
-        "description": "AI-powered insights for fuel efficiency, route planning, and maintenance scheduling."
+        "description": "Machine learning insights for fuel efficiency, maintenance scheduling, and intelligent route planning to reduce costs."
       },
-      "currency": {
-        "title": "Multi-Currency Support",
-        "description": "Handle transactions in KES, UGX, TZS with integrated Stripe payments."
+      "compliance": {
+        "title": "Customs & Compliance",
+        "description": "Automated documentation for EAC cross-border freight with digital customs clearance and real-time border crossing updates."
+      },
+      "multiCurrency": {
+        "title": "Multi-Currency Payments",
+        "description": "Handle transactions seamlessly in KES, UGX, and TZS with integrated Stripe payment processing and invoicing."
+      },
+      "security": {
+        "title": "Cargo Security",
+        "description": "Advanced cargo monitoring with theft alerts, tamper detection, and secure tracking for high-value shipments."
+      },
+      "iot": {
+        "title": "IoT Sensors",
+        "description": "Temperature, humidity, and shock sensors for sensitive cargo with real-time condition monitoring and alerts."
+      },
+      "automation": {
+        "title": "Workflow Automation",
+        "description": "Automate dispatch, documentation, and reporting workflows to reduce manual work and improve operational efficiency."
+      },
+      "eacNetwork": {
+        "title": "EAC Network Coverage",
+        "description": "Full coverage across all major corridors: Djibouti, Northern, Central, and Southern with regional expertise."
+      },
+      "efficiency": {
+        "title": "Time Efficiency",
+        "description": "Reduce delivery times by up to 25% with optimized routing, traffic analysis, and border crossing predictions."
+      },
+      "inventory": {
+        "title": "Inventory Management",
+        "description": "Track cargo from warehouse to destination with barcode scanning, digital proof of delivery, and real-time inventory."
+      },
+      "fleetManagement": {
+        "title": "Complete Fleet Control",
+        "description": "Comprehensive vehicle management with maintenance tracking, fuel monitoring, and driver performance analytics."
+      },
+      "integrations": "Integrates seamlessly with"
+    },
+    "stats": {
+      "countries": {
+        "value": "6",
+        "label": "EAC Countries Served"
+      },
+      "users": {
+        "value": "500+",
+        "label": "Active Fleet Operators"
+      },
+      "shipments": {
+        "value": "50K+",
+        "label": "Monthly Shipments Tracked"
+      },
+      "savings": {
+        "value": "30%",
+        "label": "Average Cost Reduction"
       }
+    },
+    "testimonials": {
+      "title": "Trusted by EAC Logistics Leaders",
+      "subtitle": "See how companies across East Africa are transforming their operations with GoTruck",
+      "testimonial1": {
+        "quote": "GoTruck has revolutionized our cross-border operations. The real-time tracking and automated customs documentation have reduced our border crossing times by 40%.",
+        "author": "James Kimani",
+        "role": "Operations Director",
+        "company": "EastLink Logistics",
+        "country": "Kenya",
+        "impact": "40% faster border crossings"
+      },
+      "testimonial2": {
+        "quote": "The AI-powered route optimization has saved us thousands in fuel costs. We can now handle 30% more deliveries with the same fleet size.",
+        "author": "Sarah Nakato",
+        "role": "Fleet Manager",
+        "company": "TransUganda Freight",
+        "country": "Uganda",
+        "impact": "30% increase in delivery capacity"
+      },
+      "testimonial3": {
+        "quote": "Exceptional platform! The multi-currency support and invoicing features have streamlined our billing across three countries. Customer service is outstanding.",
+        "author": "Hassan Mwinyipembe",
+        "role": "CEO",
+        "company": "Dar Cargo Express",
+        "country": "Tanzania",
+        "impact": "50% reduction in billing errors"
+      }
+    },
+    "resources": {
+      "title": "EAC Logistics Insights",
+      "subtitle": "Stay informed with the latest trends, regulations, and best practices in East African freight management",
+      "article1": {
+        "type": "Market Report",
+        "title": "2026 EAC Freight Trends: Digital Transformation in Regional Logistics",
+        "excerpt": "Explore how technology is reshaping cross-border freight operations across Kenya, Uganda, and Tanzania with insights into AI adoption and market growth.",
+        "date": "Jan 10, 2026",
+        "readTime": "8 min read",
+        "category": "Market Analysis"
+      },
+      "article2": {
+        "type": "Guide",
+        "title": "Navigating EAC Customs: A Complete Guide to Cross-Border Compliance",
+        "excerpt": "Step-by-step guidance on documentation, procedures, and best practices for seamless customs clearance at EAC border crossings.",
+        "date": "Jan 8, 2026",
+        "readTime": "12 min read",
+        "category": "Compliance"
+      },
+      "article3": {
+        "type": "Case Study",
+        "title": "How AI Reduced Fuel Costs by 35% for a Kenyan Fleet Operator",
+        "excerpt": "Real-world success story: Learn how predictive analytics and route optimization delivered significant cost savings for a major Nairobi-based logistics company.",
+        "date": "Jan 5, 2026",
+        "readTime": "6 min read",
+        "category": "Technology"
+      },
+      "readMore": "Read More",
+      "viewAll": "View All Resources"
+    },
+    "cta": {
+      "title": "Ready to Transform Your EAC Logistics?",
+      "subtitle": "Join hundreds of fleet operators who are saving time and money with GoTruck. Start your 30-day free trial today—no credit card required.",
+      "benefit1": "Free 30-day trial",
+      "benefit2": "No credit card required",
+      "benefit3": "Full platform access",
+      "benefit4": "24/7 support in English, Swahili & French",
+      "ctaPrimary": "Start Free Trial",
+      "ctaSecondary": "Schedule a Demo",
+      "trustMessage": "🔒 Enterprise-grade security • SOC 2 compliant • GDPR ready"
     }
+  },
+  "footer": {
+    "tagline": "Empowering East African logistics with AI-driven fleet management and freight solutions.",
+    "sections": {
+      "solutions": "Solutions",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "solutions": {
+      "tracking": "Real-Time Tracking",
+      "fleet": "Fleet Management",
+      "analytics": "Predictive Analytics",
+      "compliance": "Customs & Compliance"
+    },
+    "company": {
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "partners": "Partners"
+    },
+    "resources": {
+      "blog": "Blog",
+      "guides": "Guides",
+      "api": "API Documentation",
+      "support": "Support Center"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security"
+    },
+    "regionalOffices": "Regional Offices",
+    "offices": {
+      "nairobi": "Nairobi",
+      "kampala": "Kampala",
+      "daressalaam": "Dar es Salaam"
+    },
+    "copyright": "All rights reserved."
   },
   "dashboard": {
     "overview": "Dashboard Overview",
