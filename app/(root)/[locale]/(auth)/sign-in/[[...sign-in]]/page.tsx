@@ -1,18 +1,12 @@
 "use client";
 
+import { SignIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { AuthForm } from "@/components/auth/AuthForm";
-import { SocialProviders } from "@/components/auth/SocialProviders";
 import { ArrowRight } from "lucide-react";
 
 export default function SignInPage() {
   const locale = useLocale();
-  
-  const handleSubmit = (formData: FormData) => {
-    console.log("Sign in data:", Object.fromEntries(formData));
-    // TODO: Implement actual sign-in logic with Clerk
-  };
 
   return (
     <div className="animate-fade-in-up">
@@ -24,25 +18,32 @@ export default function SignInPage() {
         </p>
       </div>
 
-      {/* Social Sign In */}
-      <div className="mb-6">
-        <SocialProviders mode="signin" />
+      {/* Clerk Sign In Component */}
+      <div className="flex justify-center">
+        <SignIn
+          appearance={{
+            elements: {
+              formButtonPrimary:
+                "bg-blue-600 hover:bg-blue-700 text-sm normal-case",
+              card: "shadow-none w-full",
+              headerTitle: "hidden",
+              headerSubtitle: "hidden",
+              socialButtonsBlockButton:
+                "border-gray-300 hover:bg-gray-50 h-11",
+              formFieldLabel: "text-sm font-medium text-gray-700",
+              formFieldInput:
+                "rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-11",
+              footerActionLink: "text-blue-600 hover:text-blue-700",
+              footer: "hidden",
+            },
+          }}
+          routing="path"
+          path={`/${locale}/sign-in`}
+          signUpUrl={`/${locale}/sign-up`}
+          afterSignInUrl={`/${locale}/dashboard`}
+          afterSignUpUrl={`/${locale}/onboarding`}
+        />
       </div>
-
-      {/* Divider */}
-      <div className="relative mb-6">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-border"></div>
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-4 bg-background text-muted-foreground">
-            Or continue with email
-          </span>
-        </div>
-      </div>
-
-      {/* Email Sign In Form */}
-      <AuthForm mode="signin" onSubmit={handleSubmit} />
 
       {/* Sign Up Link */}
       <div className="mt-6 text-center">

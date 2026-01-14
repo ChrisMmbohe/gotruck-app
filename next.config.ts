@@ -16,8 +16,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  serverActions: {
-    bodySizeLimit: '10mb',
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '10mb',
+    },
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/:locale/manifest.json',
+        destination: '/manifest.json',
+      },
+    ];
   },
 };
 

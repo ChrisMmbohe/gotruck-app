@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { QueryProvider } from "@/components/providers/query-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { PWAInstaller } from "@/components/pwa-installer";
+import { clerkAppearance } from "@/lib/auth/clerk-config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <PWAInstaller />
         {hasClerkKeys ? (
-          <ClerkProvider>
+          <ClerkProvider
+            appearance={clerkAppearance}
+            publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+          >
             <QueryProvider>
               {children}
               <Toaster />
