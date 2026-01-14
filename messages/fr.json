@@ -1,0 +1,44 @@
+{
+  "common": {
+    "appName": "GoTruck",
+    "welcome": "Bienvenue",
+    "dashboard": "Tableau de bord",
+    "tracking": "Suivi en Temps Réel",
+    "fleet": "Flotte",
+    "shipments": "Expéditions",
+    "analytics": "Analytique",
+    "settings": "Paramètres",
+    "signIn": "Se Connecter",
+    "signOut": "Se Déconnecter",
+    "getStarted": "Commencer"
+  },
+  "home": {
+    "hero": {
+      "title": "Logistique de Fret EAC Simplifié",
+      "subtitle": "Suivi en temps réel, analyses prédictives et gestion transparente du fret transfrontalier pour le Kenya, l'Ouganda, la Tanzanie et au-delà."
+    },
+    "features": {
+      "title": "Fonctionnalités Puissantes pour la Logistique EAC",
+      "tracking": {
+        "title": "Suivi GPS en Temps Réel",
+        "description": "Suivez votre flotte à travers les frontières de l'EAC avec des mises à jour de localisation en direct et une optimisation des itinéraires."
+      },
+      "analytics": {
+        "title": "Analyses Prédictives",
+        "description": "Informations alimentées par l'IA pour l'efficacité énergétique, la planification d'itinéraires et la programmation de la maintenance."
+      },
+      "currency": {
+        "title": "Support Multi-Devises",
+        "description": "Gérez les transactions en KES, UGX, TZS avec les paiements Stripe intégrés."
+      }
+    }
+  },
+  "dashboard": {
+    "overview": "Aperçu du Tableau de Bord",
+    "subtitle": "Surveillez vos opérations de fret à travers l'EAC",
+    "activeShipments": "Expéditions Actives",
+    "fleetVehicles": "Véhicules de Flotte",
+    "borderCrossings": "Passages Frontaliers",
+    "revenue": "Revenu"
+  }
+}

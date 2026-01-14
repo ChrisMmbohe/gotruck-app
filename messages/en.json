@@ -1,0 +1,44 @@
+{
+  "common": {
+    "appName": "GoTruck",
+    "welcome": "Welcome",
+    "dashboard": "Dashboard",
+    "tracking": "Live Tracking",
+    "fleet": "Fleet",
+    "shipments": "Shipments",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": "EAC Freight Logistics Made Simple",
+      "subtitle": "Real-time tracking, predictive analytics, and seamless cross-border freight management for Kenya, Uganda, Tanzania, and beyond."
+    },
+    "features": {
+      "title": "Powerful Features for EAC Logistics",
+      "tracking": {
+        "title": "Real-Time GPS Tracking",
+        "description": "Track your fleet across EAC borders with live location updates and route optimization."
+      },
+      "analytics": {
+        "title": "Predictive Analytics",
+        "description": "AI-powered insights for fuel efficiency, route planning, and maintenance scheduling."
+      },
+      "currency": {
+        "title": "Multi-Currency Support",
+        "description": "Handle transactions in KES, UGX, TZS with integrated Stripe payments."
+      }
+    }
+  },
+  "dashboard": {
+    "overview": "Dashboard Overview",
+    "subtitle": "Monitor your freight operations across EAC",
+    "activeShipments": "Active Shipments",
+    "fleetVehicles": "Fleet Vehicles",
+    "borderCrossings": "Border Crossings",
+    "revenue": "Revenue"
+  }
+}

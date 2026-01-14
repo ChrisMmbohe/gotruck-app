@@ -1,0 +1,44 @@
+{
+  "common": {
+    "appName": "GoTruck",
+    "welcome": "Karibu",
+    "dashboard": "Dashibodi",
+    "tracking": "Ufuatiliaji wa Moja kwa Moja",
+    "fleet": "Magari",
+    "shipments": "Mizigo",
+    "analytics": "Uchanganuzi",
+    "settings": "Mipangilio",
+    "signIn": "Ingia",
+    "signOut": "Toka",
+    "getStarted": "Anza Sasa"
+  },
+  "home": {
+    "hero": {
+      "title": "Usafirishaji wa Mizigo ya EAC Umefanywa Rahisi",
+      "subtitle": "Ufuatiliaji wa wakati halisi, uchanganuzi wa kitabiri, na usimamizi wa mizigo usio na vikwazo kwa Kenya, Uganda, Tanzania, na zaidi."
+    },
+    "features": {
+      "title": "Vipengele Vyenye Nguvu vya Usafirishaji wa EAC",
+      "tracking": {
+        "title": "Ufuatiliaji wa GPS wa Wakati Halisi",
+        "description": "Fuatilia magari yako kote EAC kwa visasisho vya mahali na uboresha njia."
+      },
+      "analytics": {
+        "title": "Uchanganuzi wa Kitabiri",
+        "description": "Maarifa ya AI kwa ufanisi wa mafuta, mipango ya njia, na ratiba ya matengenezo."
+      },
+      "currency": {
+        "title": "Msaada wa Sarafu Nyingi",
+        "description": "Shughulikia miamala katika KES, UGX, TZS na malipo ya Stripe."
+      }
+    }
+  },
+  "dashboard": {
+    "overview": "Muhtasari wa Dashibodi",
+    "subtitle": "Fuatilia shughuli zako za mizigo kote EAC",
+    "activeShipments": "Mizigo Inayofanya Kazi",
+    "fleetVehicles": "Magari ya Floti",
+    "borderCrossings": "Uvukaji wa Mipaka",
+    "revenue": "Mapato"
+  }
+}
