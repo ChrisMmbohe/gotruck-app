@@ -46,3 +46,7 @@ next-env.d.ts
 **/public/sw.js.map
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
+
+# Commit logs (keep in git for documentation)
+# Uncomment the line below if you don't want to track commit logs
+# docs/commit-logs/
