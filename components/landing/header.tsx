@@ -103,12 +103,12 @@ export function Header() {
 
             {/* Auth Buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Link href="/sign-in">
+              <Link href={`/${currentLocale}/sign-in`}>
                 <Button variant="ghost" size="sm">
                   {t("signIn")}
                 </Button>
               </Link>
-              <Link href="/sign-up">
+              <Link href={`/${currentLocale}/sign-up`}>
                 <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600 hover:opacity-90">
                   {t("getStarted")}
                 </Button>
@@ -142,12 +142,12 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t">
-                <Link href="/sign-in">
+                <Link href={`/${currentLocale}/sign-in`}>
                   <Button variant="ghost" size="sm" className="w-full">
                     {t("signIn")}
                   </Button>
                 </Link>
-                <Link href="/sign-up">
+                <Link href={`/${currentLocale}/sign-up`}>
                   <Button size="sm" className="w-full bg-gradient-to-r from-blue-600 to-green-600">
                     {t("getStarted")}
                   </Button>
