@@ -29,6 +29,17 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '10mb',
     },
   },
+  // Optimize webpack cache configuration
+  webpack: (config, { isServer }) => {
+    // Optimize cache serialization for large strings
+    config.cache = {
+      ...config.cache,
+      compression: 'gzip',
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+    };
+    
+    return config;
+  },
   async rewrites() {
     return [
       {
