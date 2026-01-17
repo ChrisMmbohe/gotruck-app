@@ -3,16 +3,18 @@ import { Button } from "@/components/ui/button";
 
 export default function SettingsPage() {
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold">Settings</h1>
-        <p className="text-muted-foreground">Manage your account and preferences</p>
+    <div className="space-y-8 animate-fade-in">
+      {/* Header with gradient accent */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 to-gray-500/10 blur-3xl -z-10" />
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Settings</h1>
+        <p className="text-muted-foreground mt-1">Manage your account and preferences</p>
       </div>
 
-      <div className="grid gap-6">
-        <Card>
+      <div className="grid gap-6 animate-fade-in-up">
+        <Card className="hover:shadow-lg transition-all duration-300">
           <CardHeader>
-            <CardTitle>Organization Details</CardTitle>
+            <CardTitle className="text-lg font-semibold">Organization Details</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
@@ -39,13 +41,13 @@ export default function SettingsPage() {
                 placeholder="+254 700 000 000"
               />
             </div>
-            <Button>Save Changes</Button>
+            <Button className="bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black">Save Changes</Button>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-lg transition-all duration-300">
           <CardHeader>
-            <CardTitle>Currency Preferences</CardTitle>
+            <CardTitle className="text-lg font-semibold">Currency Preferences</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
@@ -56,13 +58,13 @@ export default function SettingsPage() {
                 <option value="TZS">TZS - Tanzanian Shilling</option>
               </select>
             </div>
-            <Button>Save Changes</Button>
+            <Button className="bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black">Save Changes</Button>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-lg transition-all duration-300">
           <CardHeader>
-            <CardTitle>Notification Settings</CardTitle>
+            <CardTitle className="text-lg font-semibold">Notification Settings</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between">
@@ -86,13 +88,13 @@ export default function SettingsPage() {
               </div>
               <input type="checkbox" className="h-4 w-4" />
             </div>
-            <Button>Save Changes</Button>
+            <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">Save Changes</Button>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover:shadow-lg transition-all duration-300">
           <CardHeader>
-            <CardTitle>API Access</CardTitle>
+            <CardTitle className="text-lg font-semibold">API Access</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>

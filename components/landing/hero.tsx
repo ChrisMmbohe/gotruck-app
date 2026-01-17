@@ -14,30 +14,30 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background with EAC-themed gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-green-900">
-        <div className="absolute inset-0 bg-[url('/images/hero-trucks.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+      {/* Background with slate-themed gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+        <div className="absolute inset-0 bg-[url('/images/hero-trucks4.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>
 
-      {/* Animated background elements - subtle African patterns */}
+      {/* Animated background elements - subtle patterns */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-slate-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         {/* Badge - Regional focus */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8 animate-fade-in">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <span className="w-2 h-2 bg-slate-400 rounded-full animate-pulse" />
           {t("badge")}
         </div>
 
         {/* Main Headline - Bold and clear like Uber Freight */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
           {t("title")}
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-gray-400 mt-2">
             {t("titleHighlight")}
           </span>
         </h1>
@@ -50,15 +50,15 @@ export function Hero() {
         {/* Key Benefits - Stats preview inspired by Geotab */}
         <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in-up delay-300">
           <div className="flex items-center gap-2 text-white">
-            <div className="w-3 h-3 bg-green-400 rounded-full" />
+            <div className="w-3 h-3 bg-slate-400 rounded-full" />
             <span className="text-lg font-medium">{t("benefit1")}</span>
           </div>
           <div className="flex items-center gap-2 text-white">
-            <div className="w-3 h-3 bg-blue-400 rounded-full" />
+            <div className="w-3 h-3 bg-gray-400 rounded-full" />
             <span className="text-lg font-medium">{t("benefit2")}</span>
           </div>
           <div className="flex items-center gap-2 text-white">
-            <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+            <div className="w-3 h-3 bg-slate-400 rounded-full" />
             <span className="text-lg font-medium">{t("benefit3")}</span>
           </div>
         </div>
@@ -68,7 +68,7 @@ export function Hero() {
           <Link href="/sign-up">
             <Button 
               size="lg" 
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-2xl hover:scale-105 transition-all group"
+              className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-2xl hover:scale-105 transition-all group"
             >
               {t("ctaPrimary")}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

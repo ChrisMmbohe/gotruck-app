@@ -64,10 +64,10 @@ export function Resources() {
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
             >
               {/* Image */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-green-500 relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-slate-700 to-gray-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-blue-900">
+                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold text-slate-900">
                     {resource.category}
                   </span>
                 </div>
@@ -76,12 +76,12 @@ export function Resources() {
               {/* Content */}
               <div className="p-6">
                 {/* Type Badge */}
-                <div className="text-blue-600 text-sm font-semibold mb-2 uppercase tracking-wide">
+                <div className="text-slate-700 text-sm font-semibold mb-2 uppercase tracking-wide">
                   {resource.type}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-slate-700 transition-colors line-clamp-2">
                   {resource.title}
                 </h3>
 
@@ -103,7 +103,7 @@ export function Resources() {
                 </div>
 
                 {/* Read More */}
-                <Button variant="ghost" className="p-0 h-auto font-semibold text-blue-600 hover:text-blue-700 group/btn">
+                <Button variant="ghost" className="p-0 h-auto font-semibold text-slate-700 hover:text-slate-900 group/btn">
                   {t("readMore")}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>

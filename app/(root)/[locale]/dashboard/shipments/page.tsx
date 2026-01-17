@@ -43,18 +43,19 @@ const shipments = [
 
 export default function ShipmentsPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in">
       <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">Shipments</h1>
-          <p className="text-muted-foreground">Manage freight orders and deliveries</p>
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 to-gray-500/10 blur-3xl -z-10" />
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Shipments</h1>
+          <p className="text-muted-foreground mt-1">Manage freight orders and deliveries</p>
         </div>
-        <Button>Create Shipment</Button>
+        <Button className="bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black">Create Shipment</Button>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-4 animate-fade-in-up">
         {["All", "Pending", "In Transit", "Delivered"].map((status) => (
-          <Card key={status}>
+          <Card key={status} className="hover:shadow-lg transition-all duration-300 hover:border-slate-500/50">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium">{status}</CardTitle>
             </CardHeader>
@@ -73,9 +74,9 @@ export default function ShipmentsPage() {
         ))}
       </div>
 
-      <Card>
+      <Card className="animate-fade-in-up delay-200 hover:shadow-lg transition-all duration-300">
         <CardHeader>
-          <CardTitle>All Shipments</CardTitle>
+          <CardTitle className="text-lg font-semibold">All Shipments</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">

@@ -1,5 +1,5 @@
+import { AppNavbar } from "@/components/dashboard/app-navbar";
 import { DashboardNav } from "@/components/dashboard/dashboard-nav";
-import { DashboardStats } from "@/components/dashboard/dashboard-stats";
 
 export default function DashboardLayout({
   children,
@@ -7,12 +7,14 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex">
-      <DashboardNav />
-      <main className="flex-1 p-8">
-        <DashboardStats />
-        {children}
-      </main>
+    <div className="min-h-screen flex flex-col">
+      <AppNavbar />
+      <div className="flex flex-1">
+        <DashboardNav />
+        <main className="flex-1 p-8 bg-slate-50">
+          {children}
+        </main>
+      </div>
     </div>
   );
 }

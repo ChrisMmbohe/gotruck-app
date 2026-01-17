@@ -43,10 +43,10 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href={`/${currentLocale}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center">
               <Truck className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
               {t("appName")}
             </span>
           </Link>
@@ -90,7 +90,7 @@ export function Header() {
                         setLocaleMenuOpen(false);
                       }}
                       className={`w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-3 ${
-                        currentLocale === locale.code ? "bg-blue-50 text-blue-600" : "text-gray-700"
+                        currentLocale === locale.code ? "bg-slate-50 text-slate-700" : "text-gray-700"
                       }`}
                     >
                       <span className="text-xl">{locale.flag}</span>
@@ -109,7 +109,7 @@ export function Header() {
                 </Button>
               </Link>
               <Link href={`/${currentLocale}/sign-up`}>
-                <Button size="sm" className="bg-gradient-to-r from-blue-600 to-green-600 hover:opacity-90">
+                <Button size="sm" className="bg-gradient-to-r from-slate-700 to-slate-900 hover:opacity-90">
                   {t("getStarted")}
                 </Button>
               </Link>
@@ -135,7 +135,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={`/${currentLocale}${item.href}`}
-                  className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                  className="text-sm font-medium text-gray-700 hover:text-slate-700 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -148,7 +148,7 @@ export function Header() {
                   </Button>
                 </Link>
                 <Link href={`/${currentLocale}/sign-up`}>
-                  <Button size="sm" className="w-full bg-gradient-to-r from-blue-600 to-green-600">
+                  <Button size="sm" className="w-full bg-gradient-to-r from-slate-700 to-slate-900">
                     {t("getStarted")}
                   </Button>
                 </Link>

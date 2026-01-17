@@ -38,7 +38,7 @@ export function StatsBanner() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-green-900 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-slate-900 via-slate-800 to-gray-900 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ 
@@ -67,7 +67,7 @@ export function StatsBanner() {
                 </div>
                 
                 {/* Label */}
-                <div className="text-blue-200 text-sm md:text-base font-medium">
+                <div className="text-slate-200 text-sm md:text-base font-medium">
                   {stat.label}
                 </div>
               </div>

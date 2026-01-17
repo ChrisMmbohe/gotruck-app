@@ -59,7 +59,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center">
                 <Truck className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-white">GoTruck</span>
@@ -71,13 +71,13 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 text-blue-400" />
+                <Mail className="h-4 w-4 text-slate-400" />
                 <a href="mailto:info@gotruck.app" className="hover:text-white transition-colors">
                   info@gotruck.app
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <Phone className="h-4 w-4 text-green-400" />
+                <Phone className="h-4 w-4 text-slate-400" />
                 <a href="tel:+254700000000" className="hover:text-white transition-colors">
                   +254 700 000 000
                 </a>

@@ -63,7 +63,7 @@ export function Testimonials() {
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="h-16 w-16 text-blue-600" />
+                <Quote className="h-16 w-16 text-slate-700" />
               </div>
 
               {/* Rating */}
@@ -79,15 +79,15 @@ export function Testimonials() {
               </p>
 
               {/* Impact Metric */}
-              <div className="mb-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
-                <p className="text-green-800 font-semibold text-sm">
+              <div className="mb-6 p-4 bg-slate-50 rounded-lg border-l-4 border-slate-700">
+                <p className="text-slate-800 font-semibold text-sm">
                   {testimonial.impact}
                 </p>
               </div>
 
               {/* Author Info */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center text-white font-bold text-lg">
                   {testimonial.author.charAt(0)}
                 </div>
                 <div>

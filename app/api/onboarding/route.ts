@@ -9,24 +9,41 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { role } = await req.json();
+    const body = await req.json();
+    const { 
+      role, 
+      companyName, 
+      phoneNumber, 
+      country, 
+      licenseNumber, 
+      vehicleId 
+    } = body;
 
     if (!role) {
       return NextResponse.json({ error: 'Role is required' }, { status: 400 });
     }
 
+    // Build metadata object
+    const metadata: any = {
+      role,
+      onboardingComplete: true,
+    };
+
+    if (companyName) metadata.companyName = companyName;
+    if (phoneNumber) metadata.phoneNumber = phoneNumber;
+    if (country) metadata.country = country;
+    if (licenseNumber) metadata.licenseNumber = licenseNumber;
+    if (vehicleId) metadata.vehicleId = vehicleId;
+
     // Update user metadata
     const client = await clerkClient();
     await client.users.updateUser(userId, {
-      publicMetadata: {
-        role,
-        onboardingComplete: true,
-      },
+      publicMetadata: metadata,
     });
 
-    console.log(`User ${userId} onboarding completed with role: ${role}`);
+    console.log(`User ${userId} onboarding completed with role: ${role} and profile data:`, metadata);
 
-    return NextResponse.json({ success: true, role });
+    return NextResponse.json({ success: true, role, metadata });
   } catch (error) {
     console.error('Onboarding API error:', error);
     return NextResponse.json(

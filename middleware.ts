@@ -9,11 +9,15 @@ const isPublicRoute = createRouteMatcher([
   '/',
   '/sign-in(.*)',
   '/sign-up(.*)',
+  '/terms(.*)',
+  '/privacy(.*)',
   '/api/webhooks(.*)',
   '/api/health',
   '/:locale',
   '/:locale/sign-in(.*)',
   '/:locale/sign-up(.*)',
+  '/:locale/terms(.*)',
+  '/:locale/privacy(.*)',
 ]);
 
 // Routes that require onboarding completion

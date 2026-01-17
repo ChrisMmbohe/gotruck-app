@@ -29,84 +29,84 @@ export function Features() {
       icon: Brain,
       title: t("aiSafety.title"),
       description: t("aiSafety.description"),
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-slate-500 to-gray-600",
       // Inspired by Samsara's AI-powered safety features
     },
     {
       icon: MapPin,
       title: t("realTimeTracking.title"),
       description: t("realTimeTracking.description"),
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-slate-600 to-gray-700",
       // Core feature across all platforms - adapted for EAC cross-border
     },
     {
       icon: BarChart3,
       title: t("analytics.title"),
       description: t("analytics.description"),
-      gradient: "from-green-500 to-emerald-500",
+      gradient: "from-slate-500 to-gray-600",
       // Predictive analytics inspired by Geotab's intelligence platform
     },
     {
       icon: FileCheck,
       title: t("compliance.title"),
       description: t("compliance.description"),
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-slate-700 to-gray-800",
       // EAC-specific: Customs and cross-border compliance automation
     },
     {
       icon: DollarSign,
       title: t("multiCurrency.title"),
       description: t("multiCurrency.description"),
-      gradient: "from-yellow-500 to-amber-500",
+      gradient: "from-slate-600 to-gray-700",
       // Regional payment handling for KES, UGX, TZS
     },
     {
       icon: Shield,
       title: t("security.title"),
       description: t("security.description"),
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "from-slate-700 to-gray-800",
       // Cargo security - critical for long-distance EAC routes
     },
     {
       icon: Radio,
       title: t("iot.title"),
       description: t("iot.description"),
-      gradient: "from-teal-500 to-green-500",
+      gradient: "from-slate-500 to-gray-600",
       // IoT sensors inspired by Geotab's telematics
     },
     {
       icon: Zap,
       title: t("automation.title"),
       description: t("automation.description"),
-      gradient: "from-pink-500 to-rose-500",
+      gradient: "from-slate-600 to-gray-700",
       // Workflow automation like Flexport's end-to-end platform
     },
     {
       icon: Globe,
       title: t("eacNetwork.title"),
       description: t("eacNetwork.description"),
-      gradient: "from-blue-600 to-indigo-600",
+      gradient: "from-slate-700 to-gray-800",
       // Regional network emphasis - Djibouti Corridor, Northern Corridor
     },
     {
       icon: Clock,
       title: t("efficiency.title"),
       description: t("efficiency.description"),
-      gradient: "from-cyan-500 to-blue-500",
+      gradient: "from-slate-600 to-gray-700",
       // Time savings metrics like Uber Freight
     },
     {
       icon: Package,
       title: t("inventory.title"),
       description: t("inventory.description"),
-      gradient: "from-violet-500 to-purple-500",
+      gradient: "from-slate-500 to-gray-600",
       // Warehouse integration inspired by CargoWise
     },
     {
       icon: Truck,
       title: t("fleetManagement.title"),
       description: t("fleetManagement.description"),
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-slate-700 to-gray-800",
       // Comprehensive fleet management like Motive
     },
   ];
@@ -139,7 +139,7 @@ export function Features() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-slate-700 transition-colors">
                   {feature.title}
                 </h3>
 
