@@ -216,5 +216,48 @@
     "fleetVehicles": "Magari ya Floti",
     "borderCrossings": "Uvukaji wa Mipaka",
     "revenue": "Mapato"
+  },
+  "auth": {
+    "layout": {
+      "heading": "Usafirishaji wa Mizigo Bila Matatizo Kote Afrika Mashariki",
+      "description": "Jiunge na maelfu ya biashara zinazosimamia shughuli zao za mizigo kwa ufuatiliaji wa wakati halisi, njia za kiotomatiki, na uchanganuzi kamili.",
+      "stats": {
+        "trucks": "Magari Yanayofanya Kazi",
+        "shipments": "Mizigo",
+        "onTimeRate": "Kiwango cha Wakati"
+      },
+      "copyright": "Haki zote zimehifadhiwa."
+    },
+    "signIn": {
+      "title": "Karibu tena",
+      "subtitle": "Ingia kwenye akaunti yako ili kuendelea",
+      "noAccount": "Hauna akaunti?",
+      "signUpLink": "Jisajili bure",
+      "trustMessage": "Tunaaminika na kampuni zaidi ya 5,000+ za usafirishaji kote Afrika Mashariki"
+    },
+    "signUp": {
+      "title": "Unda akaunti yako",
+      "subtitle": "Anza kusimamia usafirishaji wako wa mizigo katika dakika",
+      "hasAccount": "Tayari una akaunti?",
+      "signInLink": "Ingia",
+      "trustMessage": "Jiunge na waendeshaji wa magari 500+ wanaobadilisha shughuli zao za usafirishaji",
+      "benefits": {
+        "tracking": "Ufuatiliaji wa GPS wa wakati halisi",
+        "optimization": "Uboresha njia kiotomatiki",
+        "currency": "Msaada wa sarafu nyingi (KES, UGX, TZS)",
+        "support": "Msaada kwa wateja wa saa 24/7"
+      },
+      "legal": {
+        "agreement": "Kwa kujisajili, unakubali",
+        "terms": "Masharti ya Huduma",
+        "and": "na",
+        "privacy": "Sera ya Faragha"
+      },
+      "security": {
+        "ssl": "SSL ya biti 256",
+        "soc2": "Cheti cha SOC 2",
+        "gdpr": "Inafuata GDPR"
+      }
+    }
   }
 }

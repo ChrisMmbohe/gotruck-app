@@ -2,26 +2,27 @@
 
 import { SignUp } from "@clerk/nextjs";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function SignUpPage() {
   const locale = useLocale();
+  const t = useTranslations("auth.signUp");
 
   const benefits = [
-    "Real-time GPS tracking",
-    "Automated route optimization",
-    "Multi-currency support (KES, UGX, TZS)",
-    "24/7 customer support",
+    t("benefits.tracking"),
+    t("benefits.optimization"),
+    t("benefits.currency"),
+    t("benefits.support"),
   ];
 
   return (
     <div className="animate-fade-in-up">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Create your account</h1>
+        <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">{t("title")}</h1>
         <p className="text-muted-foreground">
-          Start managing your freight logistics in minutes
+          {t("subtitle")}
         </p>
       </div>
 
@@ -66,31 +67,31 @@ export default function SignUpPage() {
 
       {/* Legal Links */}
       <div className="mt-4 text-center text-xs text-muted-foreground">
-        By signing up, you agree to our{" "}
+        {t("legal.agreement")}{" "}
         <Link
           href={`/${locale}/terms`}
           className="text-primary hover:underline font-medium"
         >
-          Terms of Service
+          {t("legal.terms")}
         </Link>{" "}
-        and{" "}
+        {t("legal.and")}{" "}
         <Link
           href={`/${locale}/privacy`}
           className="text-primary hover:underline font-medium"
         >
-          Privacy Policy
+          {t("legal.privacy")}
         </Link>
       </div>
 
       {/* Sign In Link */}
       <div className="mt-6 text-center">
         <p className="text-sm text-muted-foreground">
-          Already have an account?{" "}
+          {t("hasAccount")}{" "}
           <Link
             href={`/${locale}/sign-in`}
             className="font-semibold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent hover:from-slate-800 hover:to-black inline-flex items-center group"
           >
-            Sign in
+            {t("signInLink")}
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 text-slate-700" />
           </Link>
         </p>
@@ -101,15 +102,15 @@ export default function SignUpPage() {
         <div className="flex items-center justify-center space-x-6 text-xs text-muted-foreground">
           <div className="flex items-center space-x-1">
             <CheckCircle2 className="h-4 w-4" />
-            <span>256-bit SSL</span>
+            <span>{t("security.ssl")}</span>
           </div>
           <div className="flex items-center space-x-1">
             <CheckCircle2 className="h-4 w-4" />
-            <span>SOC 2 Certified</span>
+            <span>{t("security.soc2")}</span>
           </div>
           <div className="flex items-center space-x-1">
             <CheckCircle2 className="h-4 w-4" />
-            <span>GDPR Compliant</span>
+            <span>{t("security.gdpr")}</span>
           </div>
         </div>
       </div>

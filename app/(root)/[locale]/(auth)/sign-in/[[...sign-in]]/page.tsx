@@ -2,19 +2,20 @@
 
 import { SignIn } from "@clerk/nextjs";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 
 export default function SignInPage() {
   const locale = useLocale();
+  const t = useTranslations("auth.signIn");
 
   return (
     <div className="animate-fade-in-up">
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Welcome back</h1>
+        <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">{t("title")}</h1>
         <p className="text-muted-foreground">
-          Sign in to your account to continue
+          {t("subtitle")}
         </p>
       </div>
 
@@ -48,12 +49,12 @@ export default function SignInPage() {
       {/* Sign Up Link */}
       <div className="mt-6 text-center">
         <p className="text-sm text-muted-foreground">
-          Don&apos;t have an account?{" "}
+          {t("noAccount")}{" "}
           <Link
             href={`/${locale}/sign-up`}
             className="font-semibold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent hover:from-slate-800 hover:to-black inline-flex items-center group"
           >
-            Sign up for free
+            {t("signUpLink")}
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 text-slate-700" />
           </Link>
         </p>
@@ -62,7 +63,7 @@ export default function SignInPage() {
       {/* Trust Indicators */}
       <div className="mt-8 pt-6 border-t border-border">
         <p className="text-xs text-center text-muted-foreground">
-          Trusted by 5,000+ logistics companies across East Africa
+          {t("trustMessage")}
         </p>
       </div>
     </div>

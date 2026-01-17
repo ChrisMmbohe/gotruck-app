@@ -216,5 +216,48 @@
     "fleetVehicles": "Fleet Vehicles",
     "borderCrossings": "Border Crossings",
     "revenue": "Revenue"
+  },
+  "auth": {
+    "layout": {
+      "heading": "Seamless Freight Logistics Across East Africa",
+      "description": "Join thousands of businesses managing their freight operations with real-time tracking, automated routing, and comprehensive analytics.",
+      "stats": {
+        "trucks": "Active Trucks",
+        "shipments": "Shipments",
+        "onTimeRate": "On-Time Rate"
+      },
+      "copyright": "All rights reserved."
+    },
+    "signIn": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account to continue",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up for free",
+      "trustMessage": "Trusted by 5,000+ logistics companies across East Africa"
+    },
+    "signUp": {
+      "title": "Create your account",
+      "subtitle": "Start managing your freight logistics in minutes",
+      "hasAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "trustMessage": "Join 500+ fleet operators transforming their logistics operations",
+      "benefits": {
+        "tracking": "Real-time GPS tracking",
+        "optimization": "Automated route optimization",
+        "currency": "Multi-currency support (KES, UGX, TZS)",
+        "support": "24/7 customer support"
+      },
+      "legal": {
+        "agreement": "By signing up, you agree to our",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy"
+      },
+      "security": {
+        "ssl": "256-bit SSL",
+        "soc2": "SOC 2 Certified",
+        "gdpr": "GDPR Compliant"
+      }
+    }
   }
 }

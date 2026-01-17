@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function AuthLayout({
   children,
@@ -10,6 +10,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const locale = useLocale();
+  const t = useTranslations("auth.layout");
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
@@ -30,31 +31,30 @@ export default function AuthLayout({
 
           <div className="space-y-6 animate-fade-in-up delay-300">
             <h1 className="text-4xl font-bold leading-tight">
-              Seamless Freight Logistics Across East Africa
+              {t("heading")}
             </h1>
             <p className="text-lg text-white/90 max-w-md">
-              Join thousands of businesses managing their freight operations with real-time tracking, 
-              automated routing, and comprehensive analytics.
+              {t("description")}
             </p>
             
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
               <div>
                 <div className="text-3xl font-bold">5K+</div>
-                <div className="text-sm text-white/80">Active Trucks</div>
+                <div className="text-sm text-white/80">{t("stats.trucks")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold">50K+</div>
-                <div className="text-sm text-white/80">Shipments</div>
+                <div className="text-sm text-white/80">{t("stats.shipments")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold">98%</div>
-                <div className="text-sm text-white/80">On-Time Rate</div>
+                <div className="text-sm text-white/80">{t("stats.onTimeRate")}</div>
               </div>
             </div>
           </div>
 
           <div className="text-sm text-white/70">
-            © 2026 GoTruck. All rights reserved.
+            © 2026 GoTruck. {t("copyright")}
           </div>
         </div>
       </div>

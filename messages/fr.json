@@ -216,5 +216,48 @@
     "fleetVehicles": "Véhicules de Flotte",
     "borderCrossings": "Passages Frontaliers",
     "revenue": "Revenu"
+  },
+  "auth": {
+    "layout": {
+      "heading": "Logistique de Fret Transparente à Travers l'Afrique de l'Est",
+      "description": "Rejoignez des milliers d'entreprises gérant leurs opérations de fret avec suivi en temps réel, routage automatisé et analyses complètes.",
+      "stats": {
+        "trucks": "Camions Actifs",
+        "shipments": "Expéditions",
+        "onTimeRate": "Taux Ponctuel"
+      },
+      "copyright": "Tous droits réservés."
+    },
+    "signIn": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte pour continuer",
+      "noAccount": "Vous n'avez pas de compte?",
+      "signUpLink": "Inscrivez-vous gratuitement",
+      "trustMessage": "Fait confiance par plus de 5 000 entreprises de logistique à travers l'Afrique de l'Est"
+    },
+    "signUp": {
+      "title": "Créez votre compte",
+      "subtitle": "Commencez à gérer votre logistique de fret en quelques minutes",
+      "hasAccount": "Vous avez déjà un compte?",
+      "signInLink": "Se connecter",
+      "trustMessage": "Rejoignez plus de 500 exploitants de flottes qui transforment leurs opérations logistiques",
+      "benefits": {
+        "tracking": "Suivi GPS en temps réel",
+        "optimization": "Optimisation automatisée des itinéraires",
+        "currency": "Support multi-devises (KES, UGX, TZS)",
+        "support": "Support client 24/7"
+      },
+      "legal": {
+        "agreement": "En vous inscrivant, vous acceptez nos",
+        "terms": "Conditions d'utilisation",
+        "and": "et",
+        "privacy": "Politique de confidentialité"
+      },
+      "security": {
+        "ssl": "SSL 256 bits",
+        "soc2": "Certifié SOC 2",
+        "gdpr": "Conforme RGPD"
+      }
+    }
   }
 }
