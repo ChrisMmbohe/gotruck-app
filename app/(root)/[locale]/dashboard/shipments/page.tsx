@@ -1,6 +1,8 @@
+import { DashboardPage } from "@/components/auth/DashboardPage";
+import { Can } from "@/components/auth/AccessControl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Package, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Package, MapPin, Clock, CheckCircle, Plus } from "lucide-react";
 
 const shipments = [
   {
@@ -42,6 +44,18 @@ const shipments = [
 ];
 
 export default function ShipmentsPage() {
+  return (
+    <DashboardPage
+      requiredPermission="VIEW_SHIPMENT"
+      title="Shipments"
+      description="Manage all shipments across EAC region"
+    >
+      <ShipmentsContent />
+    </DashboardPage>
+  );
+}
+
+function ShipmentsContent() {
   return (
     <div className="space-y-8 animate-fade-in">
       <div className="flex items-center justify-between">

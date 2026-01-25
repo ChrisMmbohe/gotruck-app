@@ -1,11 +1,14 @@
 "use client";
 
+import { DashboardPage } from "@/components/auth/DashboardPage";
+import { Can } from "@/components/auth/AccessControl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
 import { Truck, AlertTriangle, CheckCircle, Wrench, Plus, Search, Filter, Gauge, Fuel, Calendar, User, MapPin, Activity } from "lucide-react";
+import { UserRole } from "@/lib/auth/roles";
 
 const vehicles = [
   { id: 1, name: "KBZ-421", status: "active", location: "Nairobi, Kenya", driver: "John Kamau", mileage: 45200, fuel: 75, maintenance: 12, health: 92 },
@@ -17,6 +20,18 @@ const vehicles = [
 ];
 
 export default function FleetPage() {
+  return (
+    <DashboardPage
+      requiredPermission="VIEW_FLEET"
+      title="Fleet Management"
+      description="Manage your vehicle fleet across EAC region"
+    >
+      <FleetContent />
+    </DashboardPage>
+  );
+}
+
+function FleetContent() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Premium Header */}

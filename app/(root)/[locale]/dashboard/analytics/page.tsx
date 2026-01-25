@@ -1,11 +1,14 @@
 "use client";
 
+import { DashboardPage } from "@/components/auth/DashboardPage";
+import { Can } from "@/components/auth/AccessControl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, AreaChart, Area, PieChart, Pie, Cell } from "recharts";
 import { TrendingUp, TrendingDown, DollarSign, Package, Truck, Clock, ArrowUp, ArrowDown, Activity, Calendar } from "lucide-react";
+import { UserRole } from "@/lib/auth/roles";
 
 const revenueData = [
   { month: "Jan", revenue: 3200000, expenses: 2100000 },
@@ -33,6 +36,18 @@ const routePerformance = [
 ];
 
 export default function AnalyticsPage() {
+  return (
+    <DashboardPage
+      requiredPermission="VIEW_ANALYTICS"
+      title="Analytics & Insights"
+      description="Data-driven decisions for optimal operations"
+    >
+      <AnalyticsContent />
+    </DashboardPage>
+  );
+}
+
+function AnalyticsContent() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Premium Header */}

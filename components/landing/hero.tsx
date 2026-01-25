@@ -16,7 +16,7 @@ export function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background with slate-themed gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
-        <div className="absolute inset-0 bg-[url('/images/hero-trucks4.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/images/hero-trucks7.jpg')] bg-cover bg-center opacity-60 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>
 

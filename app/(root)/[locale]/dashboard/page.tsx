@@ -1,5 +1,7 @@
 "use client";
 
+import { DashboardPage as DashboardWrapper, RoleBasedDashboard } from "@/components/auth/DashboardPage";
+import { Can } from "@/components/auth/AccessControl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -7,45 +9,62 @@ import {
   Truck, Package, MapPin, TrendingUp, Clock, AlertCircle, 
   ArrowUp, ArrowDown, Activity, DollarSign, Navigation, Users 
 } from "lucide-react";
+import { UserRole } from "@/lib/auth/roles";
 
 export default function DashboardPage() {
   return (
+    <DashboardWrapper
+      requiredPermission="VIEW_DASHBOARD"
+      title="Dashboard"
+      description="Monitor your freight operations"
+    >
+      <DashboardContent />
+    </DashboardWrapper>
+  );
+}
+
+function DashboardContent() {
+  return (
     <div className="space-y-6 animate-fade-in">
       {/* Premium Header */}
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 text-white shadow-2xl">
-        <div className="absolute inset-0 bg-grid-white/[0.05] -z-0" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="relative z-10">
-          <div className="flex items-start justify-between">
-            <div>
-              <h1 className="text-4xl font-bold mb-2">Command Center</h1>
-              <p className="text-slate-300 text-lg">Real-time freight operations across East Africa</p>
+      <Can permission="VIEW_DASHBOARD">
+        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 text-white shadow-2xl">
+          <div className="absolute inset-0 bg-grid-white/[0.05] -z-0" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="relative z-10">
+            <div className="flex items-start justify-between">
+              <div>
+                <h1 className="text-4xl font-bold mb-2">Command Center</h1>
+                <p className="text-slate-300 text-lg">Real-time freight operations across East Africa</p>
+              </div>
+              <Badge className="bg-green-500/20 text-green-400 border-green-500/50 text-sm px-3 py-1">
+                <Activity className="w-3 h-3 mr-1" />
+                All Systems Operational
+              </Badge>
             </div>
-            <Badge className="bg-green-500/20 text-green-400 border-green-500/50 text-sm px-3 py-1">
-              <Activity className="w-3 h-3 mr-1" />
-              All Systems Operational
-            </Badge>
-          </div>
-          <div className="mt-6 grid grid-cols-4 gap-6">
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Active Now</p>
-              <p className="text-3xl font-bold">142</p>
-            </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">On Schedule</p>
-              <p className="text-3xl font-bold">94%</p>
-            </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Avg Response</p>
-              <p className="text-3xl font-bold">1.2h</p>
-            </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Today's Revenue</p>
-              <p className="text-3xl font-bold">KES 4.2M</p>
+            <div className="mt-6 grid grid-cols-4 gap-6">
+              <div>
+                <p className="text-slate-400 text-sm mb-1">Active Now</p>
+                <p className="text-3xl font-bold">142</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-sm mb-1">On Schedule</p>
+                <p className="text-3xl font-bold">94%</p>
+              </div>
+              <div>
+                <p className="text-slate-400 text-sm mb-1">Avg Response</p>
+                <p className="text-3xl font-bold">1.2h</p>
+              </div>
+              <Can permission="VIEW_ANALYTICS">
+                <div>
+                  <p className="text-slate-400 text-sm mb-1">Today's Revenue</p>
+                  <p className="text-3xl font-bold">KES 4.2M</p>
+                </div>
+              </Can>
             </div>
           </div>
         </div>
-      </div>
+      </Can>
 
       {/* Primary KPIs */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 animate-fade-in-up">

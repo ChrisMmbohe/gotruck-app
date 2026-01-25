@@ -43,12 +43,11 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href={`/${currentLocale}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center">
-              <Truck className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
-              {t("appName")}
-            </span>
+            <img
+              src="/images/2-rmvbg2.png"
+              alt="GoTruck Logo"
+              className="w-10 h-10 object-contain rounded-md shadow-sm"
+            />
           </Link>
 
           {/* Desktop Navigation */}

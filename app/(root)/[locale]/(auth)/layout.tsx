@@ -16,17 +16,25 @@ export default function AuthLayout({
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Panel - Branding & Info */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-primary via-primary/90 to-primary/80 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        {/* Hero Trucks Background Image */}
+        <Image
+          src="/images/hero-trucks7.jpg"
+          alt="Trucks on the road"
+          fill
+          className="object-cover object-center absolute inset-0 z-0 opacity-20"
+          priority
+        />
+        <div className="absolute inset-0 opacity-10 z-10">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full blur-3xl animate-blob"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/50 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         </div>
-        
-        <div className="relative z-10 flex flex-col justify-between p-12 text-white">
+        <div className="relative z-20 flex flex-col justify-between p-12 text-white">
           <Link href={`/${locale}`} className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-2xl font-bold text-primary">G</span>
-            </div>
-            <span className="text-2xl font-bold">GoTruck</span>
+            <img
+              src="/images/1-rmvbg2.png"
+              alt="GoTruck Logo"
+              className="w-24 h-20 object-contain rounded-md shadow-sm p-1 transition-transform group-hover:scale-110"
+            />
           </Link>
 
           <div className="space-y-6 animate-fade-in-up delay-300">
@@ -65,10 +73,11 @@ export default function AuthLayout({
           {/* Mobile Logo */}
           <div className="lg:hidden mb-8">
             <Link href={`/${locale}`} className="flex items-center space-x-2 justify-center">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">G</span>
-              </div>
-              <span className="text-2xl font-bold">GoTruck</span>
+              <img
+                src="/images/2-rmvbg2.png"
+                alt="GoTruck Logo"
+                className="w-10 h-10 object-contain rounded-md shadow-sm"
+              />
             </Link>
           </div>
 

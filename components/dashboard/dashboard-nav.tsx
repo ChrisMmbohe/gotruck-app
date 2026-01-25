@@ -12,25 +12,43 @@ import {
   Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePermissions } from "@/hooks/use-permissions";
 
 const navItems = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/tracking", label: "Tracking", icon: MapPin },
-  { href: "/dashboard/fleet", label: "Fleet", icon: Truck },
-  { href: "/dashboard/shipments", label: "Shipments", icon: Package },
-  { href: "/dashboard/analytics", label: "Analytics", icon: BarChart3 },
-  { href: "/dashboard/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard", label: "Overview", icon: LayoutDashboard, permission: "VIEW_DASHBOARD" },
+  { href: "/dashboard/tracking", label: "Tracking", icon: MapPin, permission: "VIEW_TRACKING" },
+  { href: "/dashboard/fleet", label: "Fleet", icon: Truck, permission: "VIEW_FLEET" },
+  { href: "/dashboard/shipments", label: "Shipments", icon: Package, permission: "VIEW_SHIPMENT" },
+  { href: "/dashboard/analytics", label: "Analytics", icon: BarChart3, permission: "VIEW_ANALYTICS" },
+  { href: "/dashboard/settings", label: "Settings", icon: Settings, permission: "VIEW_SETTINGS" },
 ];
 
 /**
- * Dashboard Sidebar - MongoDB-style behavior
+ * Dashboard Sidebar - Role-based navigation with MongoDB-style behavior
  * - Collapsed by default (icon-only)
  * - Auto-expands on hover
+ * - Shows only accessible routes based on user role
  * - Smooth transitions
  */
 export function DashboardNav() {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
+  const { hasPermission, isLoaded } = usePermissions();
+
+  // Filter nav items based on permissions
+  const visibleNavItems = navItems.filter(item => 
+    item.permission ? hasPermission(item.permission as any) : true
+  );
+
+  if (!isLoaded) {
+    return (
+      <aside className="h-[calc(100vh-4rem)] w-16 bg-slate-900 border-r border-slate-800">
+        <div className="flex items-center justify-center h-full">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+        </div>
+      </aside>
+    );
+  }
 
   return (
     <aside
@@ -44,7 +62,7 @@ export function DashboardNav() {
       <div className="flex flex-col h-full">
         {/* Navigation */}
         <nav className="flex-1 p-2 space-y-1 pt-4">
-          {navItems.map((item) => {
+          {visibleNavItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
 

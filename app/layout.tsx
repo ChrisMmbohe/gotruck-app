@@ -3,9 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { QueryProvider } from "@/components/providers/query-provider";
+import { CurrencyProvider } from "@/components/providers/currency-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { PWAInstaller } from "@/components/pwa-installer";
 import { clerkAppearance } from "@/lib/auth/clerk-config";
+import { PreferencesProvider } from "@/components/providers/preferences-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,14 +44,22 @@ export default function RootLayout({
             publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
           >
             <QueryProvider>
-              {children}
-              <Toaster />
+              <CurrencyProvider>
+                <PreferencesProvider>
+                  {children}
+                  <Toaster />
+                </PreferencesProvider>
+              </CurrencyProvider>
             </QueryProvider>
           </ClerkProvider>
         ) : (
           <QueryProvider>
-            {children}
-            <Toaster />
+            <CurrencyProvider>
+              <PreferencesProvider>
+                {children}
+                <Toaster />
+              </PreferencesProvider>
+            </CurrencyProvider>
           </QueryProvider>
         )}
       </body>

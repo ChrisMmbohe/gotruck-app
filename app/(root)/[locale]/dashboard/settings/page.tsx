@@ -1,7 +1,22 @@
+import { DashboardPage } from "@/components/auth/DashboardPage";
+import { Can, ShowForRole } from "@/components/auth/AccessControl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { UserRole } from "@/lib/auth/roles";
 
 export default function SettingsPage() {
+  return (
+    <DashboardPage
+      requiredPermission="VIEW_SETTINGS"
+      title="Settings"
+      description="Manage your account and preferences"
+    >
+      <SettingsContent />
+    </DashboardPage>
+  );
+}
+
+function SettingsContent() {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Header with gradient accent */}
@@ -118,3 +133,4 @@ export default function SettingsPage() {
     </div>
   );
 }
+

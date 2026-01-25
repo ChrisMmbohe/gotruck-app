@@ -1,5 +1,6 @@
 "use client";
 
+import { DashboardPage } from "@/components/auth/DashboardPage";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,18 @@ import {
 } from "lucide-react";
 
 export default function TrackingPage() {
+  return (
+    <DashboardPage
+      requiredPermission="VIEW_TRACKING"
+      title="Live Tracking"
+      description="Real-time vehicle monitoring across EAC"
+    >
+      <TrackingContent />
+    </DashboardPage>
+  );
+}
+
+function TrackingContent() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [lng] = useState(36.8219); // Nairobi

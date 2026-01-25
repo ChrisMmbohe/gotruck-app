@@ -46,8 +46,11 @@ export default function SignUpPage() {
               formButtonPrimary:
                 "bg-gradient-to-r from-slate-700 to-slate-900 hover:from-slate-800 hover:to-black text-sm normal-case shadow-lg hover:shadow-xl transition-all",
               card: "shadow-none w-full",
+              header: "hidden",
               headerTitle: "hidden",
               headerSubtitle: "hidden",
+              logoBox: "hidden",
+              logoImage: "hidden",
               socialButtonsBlockButton:
                 "border-gray-300 hover:bg-gradient-to-r hover:from-slate-50 hover:to-gray-50 h-11 transition-all",
               formFieldLabel: "text-sm font-medium text-gray-700",
