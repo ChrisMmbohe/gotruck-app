@@ -50,3 +50,5 @@ next-env.d.ts
 # Commit logs (keep in git for documentation)
 # Uncomment the line below if you don't want to track commit logs
 # docs/commit-logs/
+
+/lib/generated/prisma

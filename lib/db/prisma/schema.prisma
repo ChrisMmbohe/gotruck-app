@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Transaction {
+  id            String   @id @default(uuid())
+  type          String
+  amount        Decimal
+  currency      String
+  status        String
+  invoice       Invoice? @relation(fields: [invoiceId], references: [id])
+  invoiceId     String?
+  payment       Payment?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  auditTrail    Json?
+  predictive    Json? // e.g. riskScore, forecast
+}
+
+model Invoice {
+  id            String   @id @default(uuid())
+  reference     String   @unique
+  customerId    String
+  customer      Customer @relation(fields: [customerId], references: [id])
+  amount        Decimal
+  currency      String
+  status        String
+  dueDate       DateTime
+  payments      Payment[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  auditTrail    Json?
+  predictive    Json?
+}
+
+model Payment {
+  id            String   @id @default(uuid())
+  transactionId String   @unique
+  transaction   Transaction @relation(fields: [transactionId], references: [id])
+  amount        Decimal
+  currency      String
+  status        String
+  method        String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  auditTrail    Json?
+  predictive    Json?
+}
+
+model Customer {
+  id            String   @id @default(uuid())
+  name          String
+  email         String   @unique
+  phone         String
+  address       String
+  invoices      Invoice[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  auditTrail    Json?
+}

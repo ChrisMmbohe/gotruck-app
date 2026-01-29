@@ -9,6 +9,11 @@ import { auth } from '@clerk/nextjs/server';
 import { connectToDatabase } from '@/lib/db/mongodb';
 import { UserRepository } from '@/lib/db/models/User';
 import { UpdateUserProfileDTO } from '@/types/user';
+import { z } from 'zod';
+import { customerSchema } from '@/lib/validation/schemas';
+import { translateError } from '@/lib/validation/i18n-errors';
+import { sanitizeDeep } from '@/lib/validation/sanitize';
+import { ZodError } from 'zod';
 
 /**
  * GET /api/users/profile
@@ -74,15 +79,20 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const body: UpdateUserProfileDTO = await request.json();
 
-    // Validate required fields
-    if (!body || Object.keys(body).length === 0) {
+    const body: UpdateUserProfileDTO = await request.json();
+    // Validate and sanitize with Zod
+    const result = customerSchema.partial().safeParse(body);
+    if (!result.success) {
+      const locale = 'fr';
+      const firstErr = result.error.errors[0];
+      const translated = translateError(firstErr.message, locale);
       return NextResponse.json(
-        { success: false, message: 'No update data provided' },
+        { success: false, message: translated },
         { status: 400 }
       );
     }
+    const cleanData = result.data;
 
     const { db } = await connectToDatabase();
     const userRepo = new UserRepository(db);

@@ -17,6 +17,11 @@ import {
 } from '@/lib/auth/api-protection';
 import { UserRole } from '@/lib/auth/roles';
 import { ResourceType, Action } from '@/lib/auth/access-control';
+import { z } from 'zod';
+import { shipmentSchema } from '@/lib/validation/schemas';
+import { translateError } from '@/lib/validation/i18n-errors';
+import { sanitizeDeep } from '@/lib/validation/sanitize';
+import { ZodError } from 'zod';
 
 /**
  * GET /api/shipments
@@ -73,23 +78,22 @@ export const POST = withRole(
       return rateLimitResult.error;
     }
 
-    // Parse and validate request body
+
+    // Parse and validate request body with Zod
     let body;
     try {
       body = await request.json();
     } catch {
       return createErrorResponse('Invalid JSON body', 400, 'INVALID_JSON');
     }
-
-    // Validate required fields
-    const { origin, destination, cargo } = body;
-    if (!origin || !destination || !cargo) {
-      return createErrorResponse(
-        'Missing required fields: origin, destination, cargo',
-        400,
-        'VALIDATION_ERROR'
-      );
+    const result = shipmentSchema.safeParse(body);
+    if (!result.success) {
+      const locale = 'en';
+      const firstErr = result.error.errors[0];
+      const translated = translateError(firstErr.message, locale);
+      return createErrorResponse(translated, 400, 'VALIDATION_ERROR');
     }
+    const { origin, destination, cargo } = result.data;
 
     // Audit log
     await auditLog(user.id, 'CREATE_SHIPMENT', 'shipments', body);

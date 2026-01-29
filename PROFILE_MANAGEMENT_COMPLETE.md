@@ -494,10 +494,12 @@ const userRepo = new UserRepository(db);
 // Get user
 const profile = await userRepo.getByClerkId(userId);
 
-// Update profile
+// Update profile (partial update example)
+// ⚠️ Note: Passing a nested object like { contact: { city: 'Nairobi' } } will replace the entire contact subdocument in MongoDB unless you use partial updates (dot notation or deep merge).
+// The UserRepository.update method is implemented to perform partial updates using dot notation, so only the provided fields (e.g., contact.city) are changed and other contact fields are preserved.
 const updated = await userRepo.update(userId, {
   firstName: 'John',
-  contact: { city: 'Nairobi' }
+  contact: { city: 'Nairobi' } // Only updates contact.city, preserves other contact fields
 });
 
 // Add document

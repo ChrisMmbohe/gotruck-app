@@ -1,0 +1,171 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Currency {
+  KES
+  UGX
+  TZS
+}
+
+model Transaction {
+  id           String   @id @default(uuid())
+  type         TransactionType
+  amountMinor  Int      // Amount in minor units (e.g., cents)
+  currency     Currency
+  status       TransactionStatus
+  referenceId  String?
+  userId       String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  auditLogs    AuditLogEntry[]
+  invoice      Invoice? @relation(fields: [invoiceId], references: [id])
+  invoiceId    String?
+}
+
+enum TransactionType {
+  payment
+  invoice
+  refund
+}
+
+enum TransactionStatus {
+  pending
+  completed
+  failed
+}
+
+model Invoice {
+  id           String   @id @default(uuid())
+  customerId   String
+  amountMinor  Int      // Amount in minor units (e.g., cents)
+  currency     Currency
+  status       InvoiceStatus
+  issuedAt     DateTime @default(now())
+  dueAt        DateTime
+  paidAt       DateTime?
+  auditLogs    AuditLogEntry[]
+
+// --- Financial Models ---
+
+/// ACID-compliant transaction model with audit trail for compliance
+enum Currency {
+  KES
+  UGX
+  TZS
+}
+
+model Transaction {
+  id           String   @id @default(uuid())
+  type         TransactionType
+  amountMinor  Int      // Amount in minor units (e.g., cents)
+  currency     Currency
+  status       TransactionStatus
+  referenceId  String?
+  userId       String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  createdBy    String?
+  updatedBy    String?
+  auditLogs    AuditLogEntry[]
+  invoice      Invoice? @relation(fields: [invoiceId], references: [id])
+  invoiceId    String?
+}
+
+enum TransactionType {
+  payment
+  invoice
+  refund
+}
+
+enum TransactionStatus {
+  pending
+  completed
+  failed
+}
+
+model Invoice {
+  id           String   @id @default(uuid())
+  customerId   String
+  amountMinor  Int      // Amount in minor units (e.g., cents)
+  currency     Currency
+  status       InvoiceStatus
+  issuedAt     DateTime @default(now())
+  dueAt        DateTime
+  paidAt       DateTime?
+  createdBy    String?
+  updatedBy    String?
+  auditLogs    AuditLogEntry[]
+  payments     Payment[]
+  transactions Transaction[]
+}
+
+enum InvoiceStatus {
+  draft
+  sent
+  paid
+  overdue
+  cancelled
+}
+
+model Payment {
+  id         String   @id @default(uuid())
+  invoiceId  String
+  amountMinor Int     // Amount in minor units (e.g., cents)
+  currency   Currency
+  status     PaymentStatus
+  paidAt     DateTime
+  method     PaymentMethod
+  auditLogs  AuditLogEntry[]
+  invoice    Invoice   @relation(fields: [invoiceId], references: [id])
+}
+
+// Historical currency conversion rates
+model CurrencyConversionRate {
+  id         String   @id @default(uuid())
+  from       Currency
+  to         Currency
+  rate       Float
+  validFrom  DateTime
+  validTo    DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+enum PaymentStatus {
+  initiated
+  completed
+  failed
+}
+
+enum PaymentMethod {
+  stripe
+  mpesa
+  bank
+  cash
+}
+
+model AuditLogEntry {
+  id           String   @id @default(uuid())
+  action       String
+  performedBy  String
+  performedAt  DateTime @default(now())
+  details      String?
+  transaction  Transaction? @relation(fields: [transactionId], references: [id])
+  transactionId String?
+  invoice      Invoice? @relation(fields: [invoiceId], references: [id])
+  invoiceId    String?
+  payment      Payment? @relation(fields: [paymentId], references: [id])
+  paymentId    String?
+}

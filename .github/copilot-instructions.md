@@ -1,118 +1,66 @@
-# GoTruck App - EAC Freight Logistics Platform
 
-## Project Overview
-A comprehensive freight logistics management platform for East African Community (EAC) built with Next.js 16, React 19, and modern web technologies.
+# GoTruck App – AI Coding Agent Instructions
 
-## Tech Stack
+## Project Architecture & Key Patterns
 
-### Frontend
-- Next.js 16 (React 19) with Server Components
-- Tailwind CSS + Radix UI
-- Lucide React (Icons)
-- React Hook Form + Zod (Validation)
-- Recharts + D3.js (Visualization)
-- React Query + Zustand (State Management)
+- **Monorepo structure**: All code is in a single Next.js 16 app (React 19, TypeScript strict mode).
+- **App Router**: Use `/app` for all pages, with locale-aware routing (`[locale]/`). Group layouts for `(auth)` and `(root)`.
+- **API**: Next.js API routes in `/app/api/`, versioned under `/api/v1/`. All endpoints return `{ success, data, error, meta }` and use Zod for validation.
+- **State**: React Query (server/client) and Zustand (client) for state management.
+- **Styling**: Tailwind CSS + Radix UI. Use design tokens from `globals.css`.
+- **Auth**: Clerk for multi-tenant auth (drivers, shippers, admins). Auth UI in `/app/[locale]/(auth)/`. Integrate Clerk hooks in `AuthForm.tsx` and `SocialProviders.tsx`.
+- **Data**: MongoDB (freight, users), PostgreSQL (finance), Redis (cache/queue), Cloudinary/S3 (files). Use Mongoose/Prisma clients in `/lib/db/`.
+- **Realtime**: Socket.io for GPS tracking (see `/services/socketio/`).
+- **i18n**: All UI and errors must support English, Swahili, French. Use `next-intl` and translation files in `/messages/`.
+- **PWA**: Service worker in `/public/sw.js`, manifest in `/public/manifest.json`.
+- **DevOps**: Docker, docker-compose, GitHub Actions, Vercel. See `SETUP_COMPLETE.md` for build/run steps.
 
-### Backend
-- Next.js API Routes
-- Socket.io (Real-time GPS tracking)
-- BullMQ + Redis (Background jobs)
-- Lodash (Data transformation)
+## Essential Workflows
 
-### Database & Storage
-- MongoDB Atlas (Freight logs & documents)
-- PostgreSQL/Supabase (Financial transactions)
-- Redis (Caching)
-- Cloudinary + AWS S3 (File storage)
+- **Install**: `npm install` (Node 20+)
+- **Dev server**: `npm run dev` (default port 3000, auto-increments)
+- **Type check**: `npm run type-check`
+- **Lint**: `npm run lint`
+- **Build**: `npm run build`
+- **Docker**: `docker-compose up` or `docker build`/`docker run`
+- **Test**: (Add Jest/Playwright as needed)
 
-### Authentication & Payments
-- Clerk (Multi-tenant auth)
-- Stripe (EAC currencies: KES, UGX, TZS)
+## Project Conventions
 
-### Analytics & Mapping
-- TensorFlow.js / AWS SageMaker (Route optimization)
-- Mapbox GL JS (EAC border-crossing data)
+- **TypeScript everywhere**; strict mode enforced
+- **Server Components by default**; use Client Components only for interactivity
+- **API responses**: Always wrap in `{ success, data, error, meta }`
+- **Validation**: Use Zod schemas for all API/form input; see `/lib/validation/`
+- **Error handling**: Use error boundaries and `/lib/api/error-handler.ts`
+- **Pagination/filtering**: Use `/lib/api/pagination.ts` helpers
+- **Multi-currency**: Use `/lib/finance/currency.ts` and `/lib/finance/exchange-rates.ts`
+- **RBAC**: Use `/lib/auth/permissions.ts` and `/hooks/use-permissions.ts` for role checks
+- **Responsive**: All UI must be mobile-first, touch targets ≥44px
+- **Accessibility**: Follow WCAG 2.1 AA; use semantic HTML, ARIA, and focus states
+- **i18n**: All user-facing strings must be translatable; use translation keys
+- **Docs**: See `/docs/` for feature guides and `/DEVELOPMENT_ROADMAP.md` for phase/task breakdown
 
-### DevOps
-- Docker + Kubernetes
-- Vercel (Deployment)
-- Sentry (Error tracking)
-- Prometheus (Monitoring)
-- GitHub Actions (CI/CD)
+## Integration Points
 
-### Regional Features
-- i18n-next (Swahili, French, English)
-- PWA (Offline support)
+- **Clerk**: Configure in `/lib/auth/clerk-config.ts`, use hooks in auth components
+- **Stripe**: Payment logic in `/lib/payments/`, API in `/app/api/payments/`
+- **Mapbox**: Map logic in `/components/maps/`, config in `/lib/maps/`
+- **Socket.io**: Server in `/services/socketio/`, client hooks in `/hooks/`
+- **BullMQ/Redis**: Queue logic in `/lib/queue/`
+- **Cloudinary/S3**: File upload in `/lib/storage/`
 
-## Development Guidelines
-- Use TypeScript for all code
-- Follow Next.js 16 App Router conventions
-- Implement Server Components by default
-- Use proper error boundaries
-- Maintain responsive design (mobile-first)
-- Support offline functionality for rural routes
-- Handle multi-currency transactions properly
-- Implement proper authentication flows
+## Examples
 
-## Project Structure
-- `/app` - Next.js App Router pages
-- `/components` - Reusable React components
-- `/lib` - Utility functions and configurations
-- `/types` - TypeScript type definitions
-- `/styles` - Global styles
-- `/public` - Static assets
-- `/api` - API route handlers (if needed separately)
+- **API handler**: `/app/api/v1/shipments/route.ts` – validates input, wraps response, handles errors, paginates
+- **Auth form**: `/components/auth/AuthForm.tsx` – uses Clerk hooks, Zod validation, loading/error states
+- **Dashboard page**: `/app/[locale]/dashboard/overview/page.tsx` – server component, fetches data via React Query
 
-## Checklist
-- [x] Create copilot-instructions.md file
-- [x] Scaffold Next.js 16 project
-- [x] Install dependencies and setup config
-- [x] Create project structure and components
-- [x] Setup Docker and DevOps config
-- [x] Configure i18n and PWA
-- [x] Compile and verify project
-- [x] Build authentication pages (Sign In & Sign Up)
+## Quick Troubleshooting
 
-## Project Status: ✅ COMPLETED + AUTH PAGES
+- **Port in use**: `npm run dev -- --port 3003`
+- **Type errors**: `npm run type-check`
+- **Mapbox not loading**: Check `NEXT_PUBLIC_MAPBOX_TOKEN` in `.env.local`
+- **Auth not working**: Check Clerk keys and integration in `/lib/auth/`
 
-The GoTruck EAC Freight Logistics Platform has been successfully set up with all required dependencies, configurations, and initial implementation.
-
-### What's Implemented:
-- Next.js 15.5.9 with React 19
-- Complete dashboard with 6 pages (Overview, Tracking, Fleet, Shipments, Analytics, Settings)
-- **NEW: Modern authentication pages (Sign In & Sign Up) with shared layout**
-- **NEW: Reusable auth components (AuthForm, SocialProviders)**
-- **NEW: Group layouts for (auth) and (root) route organization**
-- MongoDB, Redis, and BullMQ integration
-- Clerk authentication support (UI ready)
-- Stripe payment integration ready
-- Mapbox GPS tracking page
-- PWA with service worker
-- i18n support (English, Swahili, French)
-- Docker and docker-compose configuration
-- GitHub Actions CI/CD pipeline
-- Comprehensive type definitions
-- Production build successful
-
-### Authentication Pages:
-- **/sign-in** - Email/password + social login (Google, Apple)
-- **/sign-up** - Account creation with company info
-- Fully responsive (mobile, tablet, desktop)
-- Accessible (WCAG 2.1 AA compliant)
-- Animated backgrounds and smooth transitions
-- Touch-friendly 44px buttons
-- See `/docs/AUTH_README.md` for details
-
-### Development Server:
-Running on http://localhost:3001
-
-### Next Steps:
-1. Configure environment variables in `.env.local`
-2. Set up external services (Clerk, Stripe, Mapbox, etc.)
-3. **Connect Clerk authentication to auth pages (UI ready)**
-4. Add API routes for CRUD operations
-5. Enhance real-time tracking with Socket.io
-6. Implement payment processing
-7. Add ML models for route optimization
-
-See SETUP_COMPLETE.md for detailed information.
+---
+For detailed phase/task breakdown, see `/DEVELOPMENT_ROADMAP.md`. For auth UI/logic, see `/docs/AUTH_README.md` and `/docs/AUTH_PAGES_IMPLEMENTATION.md`.

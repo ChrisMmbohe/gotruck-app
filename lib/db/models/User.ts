@@ -293,9 +293,21 @@ export class UserRepository {
     }
     
     if (updates.preferences) {
-      Object.keys(updates.preferences).forEach(key => {
-        updateDoc[`preferences.${key}`] = updates.preferences![key as keyof UserPreferences];
-      });
+      // Deep merge preferences to avoid replacing entire sub-objects
+      function flattenObject(obj: any, prefix = ''): Record<string, any> {
+        return Object.keys(obj).reduce((acc, key) => {
+          const value = obj[key];
+          const path = prefix ? `${prefix}.${key}` : key;
+          if (value && typeof value === 'object' && !Array.isArray(value)) {
+            Object.assign(acc, flattenObject(value, path));
+          } else {
+            acc[path] = value;
+          }
+          return acc;
+        }, {} as Record<string, any>);
+      }
+      const flatPrefs = flattenObject(updates.preferences, 'preferences');
+      Object.assign(updateDoc, flatPrefs);
     }
 
     const result = await this.collection.findOneAndUpdate(

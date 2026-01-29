@@ -29,6 +29,7 @@ services:
     networks:
       - gotruck-network
 
+
   socketio:
     build:
       context: ./services/socketio
@@ -42,8 +43,22 @@ services:
     networks:
       - gotruck-network
 
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "51214:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - gotruck-network
+
 volumes:
   redis-data:
+  pgdata:
 
 networks:
   gotruck-network:
