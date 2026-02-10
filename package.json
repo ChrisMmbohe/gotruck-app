@@ -32,6 +32,8 @@
     "@stripe/stripe-js": "^4.10.0",
     "@tanstack/react-query": "^5.62.11",
     "@tensorflow/tfjs": "^4.22.0",
+    "@turf/turf": "^7.3.3",
+    "@types/geojson": "^7946.0.16",
     "bullmq": "^5.30.5",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.5.1",

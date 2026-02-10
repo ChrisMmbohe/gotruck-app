@@ -24,11 +24,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '10mb',
-    },
-  },
+  // Server Actions disabled - app uses standard API routes instead
+  // experimental: {
+  //   serverActions: {
+  //     bodySizeLimit: '10mb',
+  //   },
+  // },
   // Optimize webpack cache configuration
   webpack: (config, { isServer }) => {
     // Optimize cache serialization for large strings
